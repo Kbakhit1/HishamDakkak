@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hisham Dakkak - خبير ومستشار الذكاء الاصطناعي في الإمارات</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>هشام الدقاق | خبير ومستشار الذكاء الاصطناعي في الإمارات</title>
+    <meta name="description" content="هشام الدقاق، خبير استراتيجي ومدرب معتمد في الذكاء الاصطناعي. نقدم استشارات متخصصة وبرامج تدريبية للشركات في الإمارات لتمكينها من الريادة في عصر الذكاء الاصطناعي.">
+
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:title" content="هشام الدقاق | خبير ومستشار الذكاء الاصطناعي في الإمارات">
+    <meta property="og:description" content="نقدم استشارات استراتيجية وبرامج تدريبية متخصصة لمساعدة الشركات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية.">
+    <meta property="og:image" content="https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg">
+    <meta property="og:url" content="https://hishamdakkak.com">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -436,22 +447,6 @@
                 allowTouchMove: false,
             });
             
-            new Swiper('.mediaSwiper', {
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 30,
-                autoplay: { delay: 7000, disableOnInteraction: false },
-                pagination: { el: '.swiper-pagination', clickable: true },
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                on: {
-                    slideChange: function () {
-                        this.slides.forEach(slide => {
-                            const video = slide.querySelector('video');
-                            if (video) video.pause();
-                        });
-                    }
-                }
-            });
         });
     </script>
 </body>
