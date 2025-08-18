@@ -3,18 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>هشام الدقاق | خبير ومستشار الذكاء الاصطناعي في الإمارات</title>
-    <meta name="description" content="هشام الدقاق، خبير استراتيجي ومدرب معتمد في الذكاء الاصطناعي. نقدم استشارات متخصصة وبرامج تدريبية للشركات في الإمارات لتمكينها من الريادة في عصر الذكاء الاصطناعي.">
-
-    <!-- Open Graph / Social Sharing Meta Tags -->
-    <meta property="og:title" content="هشام الدقاق | خبير ومستشار الذكاء الاصطناعي في الإمارات">
-    <meta property="og:description" content="نقدم استشارات استراتيجية وبرامج تدريبية متخصصة لمساعدة الشركات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية.">
-    <meta property="og:image" content="https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg">
-    <meta property="og:url" content="https://hishamdakkak.com">
-    <meta property="og:type" content="website">
-
+    <title>Hisham Dakkak - خبير ومستشار الذكاء الاصطناعي في الإمارات</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -24,19 +13,15 @@
     <style>
         :root {
             --bg-dark: #111827; --card-dark: #1f2937; --text-dark-primary: #f3f4f6; --text-dark-secondary: #9ca3af;
-            --bg-light: #fafffa; --card-light: #ffffff; --text-light-primary: #1f2937; --text-light-secondary: #4b5563;
+            --bg-light: #f5f7fa; --card-light: #ffffff; --text-light-primary: #111827; --text-light-secondary: #4b5563;
             --accent-dark: #f97316; --accent-dark-hover: #ea580c;
-            --accent-light: #34d399; --accent-light-hover: #059669; /* Pastel Green */
-        }
-        html {
-            scroll-behavior: smooth;
+            --accent-light: #2563eb; --accent-light-hover: #1d4ed8;
         }
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-dark-secondary);
             transition: background-color 0.3s, color 0.3s;
-            overflow-x: hidden;
         }
         .bg-card { background-color: var(--card-dark); transition: background-color 0.3s; }
         .text-accent { color: var(--accent-dark); }
@@ -52,32 +37,31 @@
         }
         .fade-in-section {
             opacity: 0;
-            transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .fade-in-from-left { transform: translateX(-50px); }
-        .fade-in-from-right { transform: translateX(50px); }
         .fade-in-section.is-visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
         .swiper-pagination-bullet-active { background-color: var(--accent-dark) !important; }
         .swiper-button-next, .swiper-button-prev { color: var(--accent-dark) !important; }
         .hero-carousel { height: 100vh; width: 100%; position: relative; }
         .swiper-slide video { width: 100%; height: 100%; object-fit: cover; }
         .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17, 24, 39, 0.7); z-index: 2; display: flex; align-items: center; justify-content: center; }
-        .hero-text { color: #f3f4f6; }
 
         /* Light Mode Styles */
         body.light-mode {
             background-color: var(--bg-light);
             color: var(--text-light-secondary);
         }
-        body.light-mode .bg-card { background-color: var(--card-light); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05); }
+        body.light-mode .bg-card { background-color: var(--card-light); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05); }
         body.light-mode .text-primary { color: var(--text-light-primary); }
         body.light-mode .text-secondary { color: var(--text-light-secondary); }
         body.light-mode nav { background-color: rgba(255, 255, 255, 0.7); }
         body.light-mode .border-gray-700 { border-color: #e5e7eb; }
         body.light-mode .border-gray-800 { border-color: #d1d5db; }
+        body.light-mode .text-white { color: #1f2937; }
         body.light-mode .text-gray-300 { color: #374151; }
         body.light-mode .text-gray-400 { color: #6b7280; }
         body.light-mode .text-gray-500 { color: #6b7280; }
@@ -86,7 +70,7 @@
         body.light-mode .bg-accent { background-color: var(--accent-light); }
         body.light-mode .hover\:bg-accent-hover:hover { background-color: var(--accent-light-hover); }
         body.light-mode .gradient-text {
-            background: linear-gradient(90deg, #6ee7b7, #34d399);
+            background: linear-gradient(90deg, #60a5fa, #2563eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -103,7 +87,7 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_about">عن هشام</a>
                 <a href="#services" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_services">الخدمات</a>
-                <a href="#engagements" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_engagements">مشاركاتنا</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_testimonials">آراء العملاء</a>
                 <a href="#contact" class="border border-accent text-accent px-4 py-2 rounded-md hover:bg-accent/10 transition" data-lang-key="nav_contact">تواصل معنا</a>
                 <div class="flex items-center gap-4">
                     <button id="theme-toggle" class="text-gray-300 hover:text-accent text-xl"><i class="fas fa-sun"></i></button>
@@ -117,7 +101,7 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
              <a href="#about" class="block py-2 text-gray-300 hover:text-accent" data-lang-key="nav_about_mob">عن هشام</a>
              <a href="#services" class="block py-2 text-gray-300 hover:text-accent" data-lang-key="nav_services_mob">الخدمات</a>
-             <a href="#engagements" class="block py-2 text-gray-300 hover:text-accent" data-lang-key="nav_engagements_mob">مشاركاتنا</a>
+             <a href="#testimonials" class="block py-2 text-gray-300 hover:text-accent" data-lang-key="nav_testimonials_mob">آراء العملاء</a>
              <a href="#contact" class="block mt-2 border border-accent text-accent px-4 py-2 rounded-md hover:bg-accent/10 text-center" data-lang-key="nav_contact_mob">تواصل معنا</a>
              <div class="flex items-center justify-center gap-6 mt-4">
                 <button id="theme-toggle-mob" class="text-gray-300 hover:text-accent text-xl"><i class="fas fa-sun"></i></button>
@@ -129,19 +113,17 @@
     <header class="hero-carousel">
         <div class="swiper heroSwiper h-full">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550771/Cover_video_bbu6ht.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550970/Cover_video2_zyouju.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551595/Untitled_video_3_iqk8mm.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_design_17_esj57t.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_video_2_ovgker.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551596/Untitled_design_20_u7kyex.mp4" autoplay muted loop playsinline></video></div>
-                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551600/Untitled_design_18_1_kwa56v.mp4" autoplay muted loop playsinline></video></div>
+                <div class="swiper-slide"><video src="https://streamable.com/jrmzee" autoplay muted loop playsinline></video></div>
+                <div class="swiper-slide"><video src="https://streamable.com/9ztwxq" autoplay muted loop playsinline></video></div>
+                <div class="swiper-slide"><video src="https://streamable.com/r2yzhc" autoplay muted loop playsinline></video></div>
+                <div class="swiper-slide"><video src="https://streamable.com/2vry5c" autoplay muted loop playsinline></video></div>
+                <div class="swiper-slide"><video src="https://streamable.com/waak6n" autoplay muted loop playsinline></video></div>
             </div>
         </div>
         <div class="hero-overlay">
-            <div class="text-center px-6">
-                 <h1 class="text-4xl md:text-6xl font-extrabold hero-text mb-4" data-lang-key="hero_title">تمكين أعمالك للريادة في عصر الذكاء الاصطناعي</h1>
-                <p class="text-lg md:text-xl hero-text max-w-3xl mx-auto mb-8 opacity-90" data-lang-key="hero_subtitle">
+            <div class="text-center text-white px-6">
+                 <h1 class="text-4xl md:text-6xl font-extrabold text-light mb-4" data-lang-key="hero_title">تمكين أعمالك للريادة في عصر الذكاء الاصطناعي</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">
                     نساعد الشركات في الإمارات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.
                 </p>
                 <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300" data-lang-key="hero_cta">
@@ -153,7 +135,7 @@
 
     <main class="container mx-auto px-6">
 
-        <section id="engagements" class="py-20 fade-in-section fade-in-from-left">
+        <section id="engagements" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-4" data-lang-key="engagements_title">خبراتنا ومشاركاتنا</h2>
             <p class="text-center text-secondary max-w-3xl mx-auto mb-12" data-lang-key="engagements_subtitle">نؤمن بمشاركة المعرفة وبناء جسور التواصل. نفخر بمشاركاتنا في فعاليات رائدة تساهم في تشكيل مستقبل التكنولوجيا في المنطقة.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -168,7 +150,7 @@
             </div>
         </section>
 
-        <section class="py-20 fade-in-section fade-in-from-right">
+        <section class="py-20 fade-in-section">
              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                     <p class="text-5xl font-extrabold gradient-text mb-2" data-count="15">0</p>
@@ -189,7 +171,7 @@
             </div>
         </section>
 
-        <section id="about" class="py-20 fade-in-section fade-in-from-left">
+        <section id="about" class="py-20 fade-in-section">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg transform -rotate-3"></div>
@@ -207,7 +189,7 @@
             </div>
         </section>
 
-        <section id="services" class="py-20 fade-in-section fade-in-from-right">
+        <section id="services" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="services_title">كيف يمكننا مساعدتك؟</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-card p-8 rounded-lg border border-gray-700 hover:border-accent transition">
@@ -223,7 +205,7 @@
             </div>
         </section>
         
-        <section id="expertise" class="py-20 fade-in-section fade-in-from-left">
+        <section id="expertise" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="expertise_title">مجالات الخبرة والتدريب</h2>
             <div class="flex flex-wrap justify-center gap-4 text-lg">
                 <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_1">القطاع القانوني</span>
@@ -235,7 +217,34 @@
             </div>
         </section>
 
-        <section id="contact" class="py-20 text-center fade-in-section fade-in-from-right">
+        <section id="testimonials" class="py-20 fade-in-section">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="testimonials_title">آراء عملائنا</h2>
+            <div class="swiper testimonialSwiper max-w-3xl mx-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center bg-card p-8 rounded-lg">
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_1_text">"كانت استشارة هشام نقطة تحول حقيقية لأعمالنا. لقد ساعدنا على رؤية إمكانيات الذكاء الاصطناعي بطريقة عملية وقابلة للتنفيذ."</p>
+                        <p class="text-primary font-bold" data-lang-key="testimonial_1_name">أحمد المرزوقي</p>
+                        <p class="text-secondary text-sm" data-lang-key="testimonial_1_title">مدير تنفيذي، شركة تقنية</p>
+                    </div>
+                    <div class="swiper-slide text-center bg-card p-8 rounded-lg">
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_2_text">"ورشة العمل كانت ممتازة. المحتوى كان غنيًا والمدرب متمكن. خرج فريقنا بمهارات جديدة وأفكار مبتكرة."</p>
+                        <p class="text-primary font-bold" data-lang-key="testimonial_2_name">فاطمة الشامسي</p>
+                        <p class="text-secondary text-sm" data-lang-key="testimonial_2_title">رئيسة قسم التسويق، شركة عقارية</p>
+                    </div>
+                     <div class="swiper-slide text-center bg-card p-8 rounded-lg">
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_3_text">"لم أكن أتوقع أن تكون تطبيقات الذكاء الاصطناعي بهذه البساطة والفعالية. شكراً هشام على تبسيط المفاهيم المعقدة."</p>
+                        <p class="text-primary font-bold" data-lang-key="testimonial_3_name">سارة عبدالله</p>
+                        <p class="text-secondary text-sm" data-lang-key="testimonial_3_title">محامية، مكتب محاماة</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 text-center fade-in-section">
             <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="contact_title">هل أنت مستعد للخطوة التالية؟</h2>
             <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">
                 سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، نحن هنا لمساعدتك.
@@ -267,8 +276,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const translations = {
                 ar: {
-                    nav_brand: "Hisham Dakkak", nav_about: "عن هشام", nav_services: "الخدمات", nav_engagements: "مشاركاتنا", nav_contact: "تواصل معنا",
-                    nav_about_mob: "عن هشام", nav_services_mob: "الخدمات", nav_engagements_mob: "مشاركاتنا", nav_contact_mob: "تواصل معنا",
+                    nav_brand: "Hisham Dakkak", nav_about: "عن هشام", nav_services: "الخدمات", nav_engagements: "مشاركاتنا", nav_testimonials: "آراء العملاء", nav_contact: "تواصل معنا",
+                    nav_about_mob: "عن هشام", nav_services_mob: "الخدمات", nav_engagements_mob: "مشاركاتنا", nav_testimonials_mob: "آراء العملاء", nav_contact_mob: "تواصل معنا",
                     hero_title: "تمكين أعمالك للريادة في عصر الذكاء الاصطناعي",
                     hero_subtitle: "نساعد الشركات في الإمارات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.",
                     hero_cta: "ابدأ رحلة التحول الآن",
@@ -289,6 +298,16 @@
                     services_training_desc: "ورش عمل ودورات تدريبية مصممة لتمكين فرق عملك بالمهارات العملية اللازمة للنجاح في عصر الذكاء الاصطناعي، مخصصة لقطاعات مثل القانون، العقارات، والتسويق.",
                     expertise_title: "مجالات الخبرة والتدريب",
                     expertise_1: "القطاع القانوني", expertise_2: "القطاع المالي", expertise_3: "الرعاية الصحية", expertise_4: "العقارات والتسويق", expertise_5: "استراتيجيات AI للشركات", expertise_6: "الذكاء الاصطناعي التوليدي",
+                    testimonials_title: "آراء عملائنا",
+                    testimonial_1_text: "كانت استشارة هشام نقطة تحول حقيقية لأعمالنا. لقد ساعدنا على رؤية إمكانيات الذكاء الاصطناعي بطريقة عملية وقابلة للتنفيذ.",
+                    testimonial_1_name: "أحمد المرزوقي",
+                    testimonial_1_title: "مدير تنفيذي، شركة تقنية",
+                    testimonial_2_text: "ورشة العمل كانت ممتازة. المحتوى كان غنيًا والمدرب متمكن. خرج فريقنا بمهارات جديدة وأفكار مبتكرة.",
+                    testimonial_2_name: "فاطمة الشامسي",
+                    testimonial_2_title: "رئيسة قسم التسويق، شركة عقارية",
+                    testimonial_3_text: "لم أكن أتوقع أن تكون تطبيقات الذكاء الاصطناعي بهذه البساطة والفعالية. شكراً هشام على تبسيط المفاهيم المعقدة.",
+                    testimonial_3_name: "سارة عبدالله",
+                    testimonial_3_title: "محامية، مكتب محاماة",
                     contact_title: "هل أنت مستعد للخطوة التالية؟",
                     contact_subtitle: "سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، نحن هنا لمساعدتك.",
                     contact_cta1: "حجز استشارة",
@@ -296,8 +315,8 @@
                     footer_text: "© 2025 Hisham Dakkak. جميع الحقوق محفوظة."
                 },
                 en: {
-                    nav_brand: "Hisham Dakkak", nav_about: "About", nav_services: "Services", nav_engagements: "Engagements", nav_contact: "Contact Us",
-                    nav_about_mob: "About", nav_services_mob: "Services", nav_engagements_mob: "Engagements", nav_contact_mob: "Contact Us",
+                    nav_brand: "Hisham Dakkak", nav_about: "About", nav_services: "Services", nav_engagements: "Engagements", nav_testimonials: "Testimonials", nav_contact: "Contact Us",
+                    nav_about_mob: "About", nav_services_mob: "Services", nav_engagements_mob: "Engagements", nav_testimonials_mob: "Testimonials", nav_contact_mob: "Contact Us",
                     hero_title: "Empowering Your Business to Lead in the AI Era",
                     hero_subtitle: "We help companies in the UAE transform AI challenges into real growth opportunities through strategic consulting and specialized training programs.",
                     hero_cta: "Start Your Transformation Journey Now",
@@ -318,6 +337,16 @@
                     services_training_desc: "Workshops and training courses designed to empower your teams with the practical skills needed to succeed in the age of AI, tailored for sectors like legal, real estate, and marketing.",
                     expertise_title: "Areas of Expertise & Training",
                     expertise_1: "Legal Sector", expertise_2: "Financial Sector", expertise_3: "Healthcare", expertise_4: "Real Estate & Marketing", expertise_5: "Corporate AI Strategies", expertise_6: "Generative AI",
+                    testimonials_title: "What Our Clients Say",
+                    testimonial_1_text: "Hisham's consultation was a real turning point for our business. He helped us see the potential of AI in a practical and actionable way.",
+                    testimonial_1_name: "Ahmed Al Marzooqi",
+                    testimonial_1_title: "CEO, Tech Company",
+                    testimonial_2_text: "The workshop was excellent. The content was rich and the trainer was an expert. Our team left with new skills and innovative ideas.",
+                    testimonial_2_name: "Fatima Al Shamsi",
+                    testimonial_2_title: "Head of Marketing, Real Estate Firm",
+                    testimonial_3_text: "I didn't expect AI applications to be this simple and effective. Thank you Hisham for simplifying complex concepts.",
+                    testimonial_3_name: "Sara Abdullah",
+                    testimonial_3_title: "Lawyer, Law Firm",
                     contact_title: "Are You Ready for the Next Step?",
                     contact_subtitle: "Whether you're looking for strategic consulting to grow your business, or wish to invite an expert for a media interview, we are here to help.",
                     contact_cta1: "Book a Consultation",
@@ -368,7 +397,7 @@
                 const gradientTextElements = document.querySelectorAll('.gradient-text');
                 gradientTextElements.forEach(el => {
                     if (isLight) {
-                        el.style.background = 'linear-gradient(90deg, #6ee7b7, #34d399)';
+                        el.style.background = 'linear-gradient(90deg, #60a5fa, #2563eb)';
                     } else {
                         el.style.background = 'linear-gradient(90deg, #fb923c, #f97316)';
                     }
@@ -399,15 +428,9 @@
 
             const sections = document.querySelectorAll('.fade-in-section');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
+                entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        if (entry.target.getBoundingClientRect().right < window.innerWidth / 2 && window.innerWidth > 768) {
-                           entry.target.classList.add('fade-in-from-left');
-                        } else {
-                           entry.target.classList.add('fade-in-from-right');
-                        }
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.1 });
@@ -447,6 +470,13 @@
                 allowTouchMove: false,
             });
             
+            new Swiper('.testimonialSwiper', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                autoplay: { delay: 7000, disableOnInteraction: false },
+                pagination: { el: '.swiper-pagination', clickable: true },
+            });
         });
     </script>
 </body>
