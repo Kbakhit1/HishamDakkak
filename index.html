@@ -63,14 +63,15 @@
         }
         .swiper-pagination-bullet-active { background-color: var(--accent-dark) !important; }
         .swiper-button-next, .swiper-button-prev { color: var(--accent-dark) !important; }
-        .hero-carousel { height: 100vh; width: 100%; position: relative; }
+        .hero-carousel { height: 100vh; width: 100%; position: relative; background:#000; }
         .swiper-slide video { width: 100%; height: 100%; object-fit: cover; }
         .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17, 24, 39, 0.7); z-index: 2; display: flex; align-items: center; justify-content: center; }
 
-        /* Mobile Video Adjustment */
+        /* Mobile Video Adjustment: prevent crop/distortion */
         @media (max-width: 768px) {
             .hero-carousel { height: 85vh; }
             .hero-overlay h1 { font-size: 2.25rem; line-height: 2.75rem; }
+            .swiper-slide video { object-fit: contain; background:#000; }
         }
 
         /* Light Mode Styles */
@@ -252,28 +253,26 @@
             </div>
         </section>
 
+        <!-- CHANGED: Section title and items per your request -->
         <section id="projects" class="py-20 fade-in-section">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="projects_title">أبرز المشاريع والمبادرات</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="projects_title">الشركات والأعمال</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_1_title">grow50x.ai</h3>
-                    <p class="text-secondary" data-lang-key="project_1_desc">منصة متخصصة في تقديم حلول النمو المعتمدة على الذكاء الاصطناعي للشركات.</p>
+                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_grow50x_title">grow50x.ai</h3>
+                    <p class="text-secondary" data-lang-key="project_grow50x_desc">شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_2_title">ToolsWorld.ai</h3>
-                    <p class="text-secondary" data-lang-key="project_2_desc">منصة رائدة تهدف إلى دمقرطة الذكاء الاصطناعي عبر مساعدة المستخدمين على اكتشاف وتقييم أحدث الأدوات.</p>
+                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_toolsworld_title">ToolsWorld.ai</h3>
+                    <p class="text-secondary" data-lang-key="project_toolsworld_desc">أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_3_title">Dubai Decor World</h3>
-                    <p class="text-secondary" data-lang-key="project_3_desc">مشروع يجمع بين التكنولوجيا والتصميم، ويقدم حلولاً مبتكرة في قطاع الديكور والتصميم الداخلي.</p>
+                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_digitalmsa_title">DigitalMSA.com</h3>
+                    <p class="text-secondary" data-lang-key="project_digitalmsa_desc">شركة تسويق إلكتروني وتصميم مواقع متخصصة في مساعدة الشركات على بناء علامتها التجارية على الإنترنت.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_4_title">Arabian Tour</h3>
-                    <p class="text-secondary" data-lang-key="project_4_desc">مبادرة في قطاع السياحة تستخدم التكنولوجيا لتعزيز التجربة السياحية في المنطقة.</p>
-                </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_5_title">MSA</h3>
-                    <p class="text-secondary" data-lang-key="project_5_desc">مشروع متخصص يقدم خدمات وحلولاً مبتكرة.</p>
+                <!-- Make DubaiDecorWorld last -->
+                <div class="bg-card p-6 rounded-lg border border-gray-700 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_dubaidecor_title">DubaiDecorWorld.com</h3>
+                    <p class="text-secondary" data-lang-key="project_dubaidecor_desc">شركة ديكور وتصميم داخلي تختص بتصميم المشاريع الهندسية وتنفيذ ورق الجدران والستائر.</p>
                 </div>
             </div>
         </section>
@@ -282,10 +281,10 @@
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="media_title">من أعمالي</h2>
             <div class="swiper mediaSwiper rounded-lg shadow-2xl" style="height: 50vh;">
                 <div class="swiper-wrapper">
-                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_video_2_ovgker.mp4" controls></video></div>
-                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551595/Untitled_video_3_iqk8mm.mp4" controls></video></div>
-                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551596/Untitled_design_20_u7kyex.mp4" controls></video></div>
-                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551600/Untitled_design_18_1_kwa56v.mp4" controls></video></div>
+                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_video_2_ovgker.mp4" controls playsinline></video></div>
+                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551595/Untitled_video_3_iqk8mm.mp4" controls playsinline></video></div>
+                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551596/Untitled_design_20_u7kyex.mp4" controls playsinline></video></div>
+                      <div class="swiper-slide bg-black"><video class="w-full h-full object-contain" src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551600/Untitled_design_18_1_kwa56v.mp4" controls playsinline></video></div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -380,12 +379,12 @@
                     services_training_desc: "ورش عمل ودورات تدريبية مصممة لتمكين فريق عملك بالمهارات العملية اللازمة للنجاح في عصر الذكاء الاصطناعي، مخصصة لقطاعات مثل القانون، العقارات، والتسويق.",
                     expertise_title: "مجالات الخبرة والتدريب",
                     expertise_1: "القطاع القانوني", expertise_2: "القطاع المالي", expertise_3: "الرعاية الصحية", expertise_4: "العقارات والتسويق", expertise_5: "استراتيجيات AI للشركات", expertise_6: "الذكاء الاصطناعي التوليدي",
-                    projects_title: "أبرز المشاريع والمبادرات",
-                    project_1_title: "grow50x.ai", project_1_desc: "منصة متخصصة في تقديم حلول النمو المعتمدة على الذكاء الاصطناعي للشركات.",
-                    project_2_title: "ToolsWorld.ai", project_2_desc: "منصة رائدة تهدف إلى دمقرطة الذكاء الاصطناعي عبر مساعدة المستخدمين على اكتشاف وتقييم أحدث الأدوات.",
-                    project_3_title: "Dubai Decor World", project_3_desc: "مشروع يجمع بين التكنولوجيا والتصميم، ويقدم حلولاً مبتكرة في قطاع الديكور والتصميم الداخلي.",
-                    project_4_title: "Arabian Tour", project_4_desc: "مبادرة في قطاع السياحة تستخدم التكنولوجيا لتعزيز التجربة السياحية في المنطقة.",
-                    project_5_title: "MSA", project_5_desc: "مشروع متخصص يقدم خدمات وحلولاً مبتكرة.",
+                    /* UPDATED: projects section title and items */
+                    projects_title: "الشركات والأعمال",
+                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.",
+                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "شركة تسويق إلكتروني وتصميم مواقع متخصصة في مساعدة الشركات على بناء علامتها التجارية على الإنترنت.",
+                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "شركة ديكور وتصميم داخلي تختص بتصميم المشاريع الهندسية وتنفيذ ورق الجدران والستائر.",
                     media_title: "من أعمالي",
                     testimonials_title: "آراء عملائي",
                     testimonial_1_text: "كانت استشارة هشام نقطة تحول حقيقية لأعمالنا. لقد ساعدني على رؤية إمكانيات الذكاء الاصطناعي بطريقة عملية وقابلة للتنفيذ.",
@@ -429,12 +428,12 @@
                     services_training_desc: "Workshops and training courses designed to empower your teams with the practical skills needed to succeed in the age of AI, tailored for sectors like legal, real estate, and marketing.",
                     expertise_title: "Areas of Expertise & Training",
                     expertise_1: "Legal Sector", expertise_2: "Financial Sector", expertise_3: "Healthcare", expertise_4: "Real Estate & Marketing", expertise_5: "Corporate AI Strategies", expertise_6: "Generative AI",
-                    projects_title: "Key Projects & Initiatives",
-                    project_1_title: "grow50x.ai", project_1_desc: "A specialized platform offering AI-driven growth solutions for businesses.",
-                    project_2_title: "ToolsWorld.ai", project_2_desc: "A leading platform aimed at democratizing AI by helping users discover and evaluate the latest tools.",
-                    project_3_title: "Dubai Decor World", project_3_desc: "A project that combines technology and design, offering innovative solutions in the decor and interior design sector.",
-                    project_4_title: "Arabian Tour", project_4_desc: "An initiative in the tourism sector that uses technology to enhance the tourist experience in the region.",
-                    project_5_title: "MSA", project_5_desc: "A specialized project that provides innovative services and solutions.",
+                    /* UPDATED: projects section title and items */
+                    projects_title: "Companies & Work",
+                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "A company specializing in helping businesses with digital transformation and task automation using AI.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "The first 7-language AI tools directory that helps users discover and evaluate AI tools.",
+                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "A digital marketing and web design company specialized in helping businesses build their online brand.",
+                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "An interior design company specializing in engineering project design and implementing wallpapers and curtains.",
                     media_title: "My Work",
                     testimonials_title: "What My Clients Say",
                     testimonial_1_text: "Hisham's consultation was a real turning point for our business. He helped me see the potential of AI in a practical and actionable way.",
