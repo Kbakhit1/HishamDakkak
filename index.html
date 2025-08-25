@@ -57,32 +57,35 @@
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
         .swiper-pagination-bullet-active { background-color: var(--accent-dark) !important; }
         .swiper-button-next, .swiper-button-prev { color: var(--accent-dark) !important; }
-        .hero-carousel { height: 100vh; width: 100%; position: relative; background:#000; }
-        .swiper-slide video { width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17, 24, 39, 0.7); z-index: 2; display: flex; align-items: center; justify-content: center; }
 
-        /* Mobile Video Adjustment: prevent crop/distortion */
+        /* HERO (videos + overlay) */
+        .hero-carousel { min-height: calc(100svh - var(--nav-h, 64px)); width: 100%; position: relative; background:#000; overflow:hidden; }
+        .swiper-slide video { width: 100%; height: 100%; object-fit: cover; background:#000; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(17, 24, 39, 0.68); z-index: 2; display: flex; align-items: center; justify-content: center; text-align:center; padding: 0 1rem; }
+        .hero-overlay h1{font-size:clamp(2rem,6vw,3.75rem);line-height:1.2;color:#fff;font-weight:800;margin-bottom:1rem}
+        .hero-overlay p{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.6;color:#e5e7eb;margin-bottom:1.25rem}
+        .hero-overlay a{background:#f97316;color:#fff;font-weight:bold;padding:.85rem 2rem;border-radius:.6rem;display:inline-block;transition:background .3s}
+        .hero-overlay a:hover{background:#ea580c}
+
+        /* Mobile: avoid crop/distortion & keep text rhythm */
         @media (max-width: 768px) {
-            .hero-carousel { height: 85vh; }
-            .hero-overlay h1 { font-size: 2.25rem; line-height: 2.75rem; }
-            .swiper-slide video { object-fit: contain; background:#000; }
+            .hero-carousel { min-height: unset; height: auto; }
+            .heroSwiper { height: auto; }
+            .swiper-slide video { width:100%; height:auto; object-fit: contain; background:#000; }
+            .hero-overlay { position: static; background: rgba(17, 24, 39, 0.75); padding: clamp(16px, 6vh, 32px) 16px; }
+            .hero-overlay h1 { font-size: clamp(1.6rem, 6.2vw, 2.6rem); line-height: 1.25; }
+            .hero-overlay p  { font-size: clamp(.95rem, 3.2vw, 1.125rem); }
         }
 
         /* Light Mode Styles */
-        body.light-mode {
-            background-color: var(--bg-light);
-            color: var(--text-light-secondary);
-        }
+        body.light-mode { background-color: var(--bg-light); color: var(--text-light-secondary); }
         body.light-mode .bg-card { background-color: var(--card-light); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05); }
         body.light-mode .text-primary { color: var(--text-light-primary); }
         body.light-mode .text-secondary { color: var(--text-light-secondary); }
-        body.light-mode nav { background-color: rgba(255, 255, 255, 0.7); }
+        body.light-mode nav { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(6px); }
         body.light-mode .border-gray-700 { border-color: #e5e7eb; }
         body.light-mode .border-gray-800 { border-color: #d1d5db; }
         body.light-mode .text-white { color: #1f2937; }
@@ -93,14 +96,9 @@
         body.light-mode .border-accent { border-color: var(--accent-light); }
         body.light-mode .bg-accent { background-color: var(--accent-light); }
         body.light-mode .hover\:bg-accent-hover:hover { background-color: var(--accent-light-hover); }
-        body.light-mode .gradient-text {
-            background: linear-gradient(90deg, #60a5fa, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        body.light-mode .gradient-text { background: linear-gradient(90deg, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         body.light-mode .swiper-pagination-bullet-active { background-color: var(--accent-light) !important; }
         body.light-mode .swiper-button-next, body.light-mode .swiper-button-prev { color: var(--accent-light) !important; }
-        body.light-mode .grayscale { filter: grayscale(0); opacity: 1; }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -144,13 +142,11 @@
         </div>
         <div class="hero-overlay">
             <div class="text-center text-white px-6">
-                 <h1 class="text-4xl md:text-6xl font-extrabold text-light mb-4" data-lang-key="hero_title">أتمتة ما يصل إلى 80% من أعمال شركتك</h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">
+                 <h1 class="font-extrabold" data-lang-key="hero_title">أتمتة ما يصل إلى 80% من أعمال شركتك</h1>
+                <p class="max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">
                     أساعدك على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.
                 </p>
-                <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300" data-lang-key="hero_cta">
-                    ابدأ رحلتك الآن
-                </a>
+                <a href="#contact" class="" data-lang-key="hero_cta">ابدأ رحلتك الآن</a>
             </div>
         </div>
     </header>
@@ -170,7 +166,7 @@
                     <p class="text-secondary" data-lang-key="engagements_worldef_desc">مشاركاتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، بالإضافة إلى التقدير من منصات عالمية مثل Forbes، تعكس التزامي بدعم الابتكار في القطاعات الحيوية.</p>
                 </div>
             </div>
-             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_ibng_title">IBNG AI Event</h3>
                     <p class="text-secondary text-sm" data-lang-key="engagements_ibng_desc">متحدث في فعالية IBNG AI، حيث قدمت عرضًا بعنوان "الذكاء الاصطناعي للأعمال: تحويل المستقبل".</p>
@@ -187,7 +183,7 @@
         </section>
 
         <section class="py-20 fade-in-section">
-             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                     <p class="text-5xl font-extrabold gradient-text mb-2" data-count="15">0</p>
                     <p class="text-secondary" data-lang-key="stat_exp">سنة من الخبرة</p>
@@ -215,12 +211,8 @@
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="about_title">شريكك نحو التميز في عالم الذكاء الاصطناعي</h2>
-                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">
-                        بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.
-                    </p>
-                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">
-                        أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.
-                    </p>
+                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.</p>
+                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.</p>
                 </div>
             </div>
         </section>
@@ -240,7 +232,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="expertise" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="expertise_title">مجالات الخبرة والتدريب</h2>
             <div class="flex flex-wrap justify-center gap-4 text-lg">
@@ -253,7 +245,7 @@
             </div>
         </section>
 
-        <!-- CHANGED: Section title and items per your request -->
+        <!-- Companies & Work (reordered, Arabian tours removed) -->
         <section id="projects" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="projects_title">الشركات والأعمال</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -308,7 +300,7 @@
                         <p class="text-primary font-bold" data-lang-key="testimonial_2_name">فاطمة الشامسي</p>
                         <p class="text-secondary text-sm" data-lang-key="testimonial_2_title">رئيسة قسم التسويق، شركة عقارية</p>
                     </div>
-                     <div class="swiper-slide text-center bg-card p-8 rounded-lg">
+                    <div class="swiper-slide text-center bg-card p-8 rounded-lg">
                         <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
                         <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_3_text">"لم أكن أتوقع أن تكون تطبيقات الذكاء الاصطناعي بهذه البساطة والفعالية. شكراً هشام على تبسيط المفاهيم المعقدة."</p>
                         <p class="text-primary font-bold" data-lang-key="testimonial_3_name">سارة عبدالله</p>
@@ -321,9 +313,7 @@
 
         <section id="contact" class="py-20 text-center fade-in-section">
             <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="contact_title">هل أنت مستعد للخطوة التالية؟</h2>
-            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">
-                سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.
-            </p>
+            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a id="whatsapp-consult" href="https://wa.me/971526671197?text=أرغب%20في%20حجز%20استشارة%20استراتيجية%20حول%20الذكاء%20الاصطناعي." target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp"></i>
@@ -349,6 +339,14 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Compute nav height for proper hero sizing on desktop
+            const nav = document.querySelector('nav');
+            if (nav) {
+                const setNavH = () => document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+                setNavH();
+                window.addEventListener('resize', setNavH);
+            }
+
             const translations = {
                 ar: {
                     nav_brand: "Hisham Dakkak", nav_about: "عن هشام", nav_services: "الخدمات", nav_projects: "المشاريع", nav_contact: "تواصل معي",
@@ -379,7 +377,6 @@
                     services_training_desc: "ورش عمل ودورات تدريبية مصممة لتمكين فريق عملك بالمهارات العملية اللازمة للنجاح في عصر الذكاء الاصطناعي، مخصصة لقطاعات مثل القانون، العقارات، والتسويق.",
                     expertise_title: "مجالات الخبرة والتدريب",
                     expertise_1: "القطاع القانوني", expertise_2: "القطاع المالي", expertise_3: "الرعاية الصحية", expertise_4: "العقارات والتسويق", expertise_5: "استراتيجيات AI للشركات", expertise_6: "الذكاء الاصطناعي التوليدي",
-                    /* UPDATED: projects section title and items */
                     projects_title: "الشركات والأعمال",
                     project_grow50x_title: "grow50x.ai", project_grow50x_desc: "شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.",
                     project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.",
@@ -428,7 +425,6 @@
                     services_training_desc: "Workshops and training courses designed to empower your teams with the practical skills needed to succeed in the age of AI, tailored for sectors like legal, real estate, and marketing.",
                     expertise_title: "Areas of Expertise & Training",
                     expertise_1: "Legal Sector", expertise_2: "Financial Sector", expertise_3: "Healthcare", expertise_4: "Real Estate & Marketing", expertise_5: "Corporate AI Strategies", expertise_6: "Generative AI",
-                    /* UPDATED: projects section title and items */
                     projects_title: "Companies & Work",
                     project_grow50x_title: "grow50x.ai", project_grow50x_desc: "A company specializing in helping businesses with digital transformation and task automation using AI.",
                     project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "The first 7-language AI tools directory that helps users discover and evaluate AI tools.",
@@ -501,33 +497,23 @@
                 });
             }
             
-            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => {
-                btn.addEventListener('click', toggleTheme);
-            });
+            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => { btn.addEventListener('click', toggleTheme); });
 
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+                    if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); }
                 });
             });
 
             const sections = document.querySelectorAll('.fade-in-section');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
             }, { threshold: 0.1 });
             sections.forEach(section => observer.observe(section));
 
@@ -535,22 +521,14 @@
             const statsObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const target = +el.dataset.count;
-                        let current = 0;
-                        const duration = 2000;
-                        const stepTime = Math.max(1, Math.floor(duration / target));
+                        const el = entry.target; const target = +el.dataset.count; let current = 0;
+                        const duration = 2000; const stepTime = Math.max(1, Math.floor(duration / target));
                         const increment = Math.ceil(target / (duration / stepTime));
-                        
                         const timer = setInterval(() => {
                             current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                            }
+                            if (current >= target) { current = target; clearInterval(timer); }
                             el.textContent = current;
                         }, stepTime);
-                        
                         observer.unobserve(el);
                     }
                 });
@@ -558,11 +536,11 @@
             stats.forEach(stat => statsObserver.observe(stat));
 
             new Swiper('.heroSwiper', {
-                effect: 'fade',
-                fadeEffect: { crossFade: true },
+                effect: 'fade', fadeEffect: { crossFade: true },
                 loop: true,
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 allowTouchMove: false,
+                autoHeight: true,
             });
             
             new Swiper('.mediaSwiper', {
@@ -572,14 +550,7 @@
                 autoplay: { delay: 7000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                on: {
-                    slideChange: function () {
-                        this.slides.forEach(slide => {
-                            const video = slide.querySelector('video');
-                            if (video) video.pause();
-                        });
-                    }
-                }
+                on: { slideChange: function () { this.slides.forEach(slide => { const v = slide.querySelector('video'); if (v) v.pause(); }); } }
             });
 
             new Swiper('.testimonialSwiper', {
