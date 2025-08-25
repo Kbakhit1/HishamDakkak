@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         :root {
@@ -61,7 +61,7 @@
         .swiper-pagination-bullet-active { background-color: var(--accent-dark) !important; }
         .swiper-button-next, .swiper-button-prev { color: var(--accent-dark) !important; }
 
-        /* HERO (videos + overlay) */
+        /* HERO */
         .hero-carousel { min-height: calc(100svh - var(--nav-h, 64px)); width: 100%; position: relative; background:#000; overflow:hidden; }
         .swiper-slide video { width: 100%; height: 100%; object-fit: cover; background:#000; }
         .hero-overlay { position: absolute; inset: 0; background: rgba(17, 24, 39, 0.68); z-index: 2; display: flex; align-items: center; justify-content: center; text-align:center; padding: 0 1rem; }
@@ -69,6 +69,15 @@
         .hero-overlay p{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.6;color:#e5e7eb;margin-bottom:1.25rem}
         .hero-overlay a{background:#f97316;color:#fff;font-weight:bold;padding:.85rem 2rem;border-radius:.6rem;display:inline-block;transition:background .3s}
         .hero-overlay a:hover{background:#ea580c}
+
+        /* Company logo in cards */
+        .company-logo{width:100%; height:68px; object-fit:contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,.2)); margin-bottom:.75rem}
+
+        /* Engagement images */
+        .eng-img{width:100%; height:180px; object-fit:cover; border-radius:.5rem; margin-bottom:.75rem}
+
+        /* Site brand logo */
+        .brand-logo{width:36px; height:36px; object-fit:contain}
 
         /* Mobile: avoid crop/distortion & keep text rhythm */
         @media (max-width: 768px) {
@@ -78,6 +87,7 @@
             .hero-overlay { position: static; background: rgba(17, 24, 39, 0.75); padding: clamp(16px, 6vh, 32px) 16px; }
             .hero-overlay h1 { font-size: clamp(1.6rem, 6.2vw, 2.6rem); line-height: 1.25; }
             .hero-overlay p  { font-size: clamp(.95rem, 3.2vw, 1.125rem); }
+            .eng-img{height:160px}
         }
 
         /* Light Mode Styles */
@@ -105,7 +115,10 @@
 
     <nav class="bg-gray-900/70 backdrop-blur-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primary" data-lang-key="nav_brand">Hisham Dakkak</a>
+            <a href="#" class="flex items-center gap-3 text-2xl font-bold text-primary" data-lang-key="nav_brand">
+                <img src="https://i.postimg.cc/Bv3dyxss/Untitled-design-49.png" alt="Hisham Dakkak Logo" class="brand-logo" onerror="this.style.display='none'">
+                Hisham Dakkak
+            </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_about">عن هشام</a>
                 <a href="#services" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_services">الخدمات</a>
@@ -138,15 +151,17 @@
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550771/Cover_video_bbu6ht.mp4" autoplay muted loop playsinline></video></div>
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550970/Cover_video2_zyouju.mp4" autoplay muted loop playsinline></video></div>
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_design_17_esj57t.mp4" autoplay muted loop playsinline></video></div>
+                <!-- Added new cover video at the end -->
+                <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551596/Untitled_design_20_u7kyex.mp4" autoplay muted loop playsinline></video></div>
             </div>
         </div>
         <div class="hero-overlay">
             <div class="text-center text-white px-6">
-                 <h1 class="font-extrabold" data-lang-key="hero_title">أتمتة ما يصل إلى 80% من أعمال شركتك</h1>
+                <h1 class="font-extrabold" data-lang-key="hero_title">أتمتة ما يصل إلى 80% من أعمال شركتك</h1>
                 <p class="max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">
                     أساعدك على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.
                 </p>
-                <a href="#contact" class="" data-lang-key="hero_cta">ابدأ رحلتك الآن</a>
+                <a href="#contact" data-lang-key="hero_cta">ابدأ رحلتك الآن</a>
             </div>
         </div>
     </header>
@@ -158,24 +173,29 @@
             <p class="text-center text-secondary max-w-3xl mx-auto mb-12" data-lang-key="engagements_subtitle">أؤمن بمشاركة المعرفة وبناء جسور التواصل. أفخر بمشاركاتي في فعاليات رائدة تساهم في تشكيل مستقبل التكنولوجيا في المنطقة.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div class="bg-card p-8 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/PxMk6CYN/RAM00473.jpg" alt="HSBC Middle East Investment Outlook" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-2xl font-bold text-accent mb-3" data-lang-key="engagements_hsbc_title">HSBC Middle East Investment Outlook</h3>
                     <p class="text-secondary" data-lang-key="engagements_hsbc_desc">كان لي شرف تقديم رؤى استراتيجية حول تأثير الذكاء الاصطناعي على الاستثمارات المستقبلية، في جلسة حصرية أمام نخبة من كبار عملاء البنك ذوي الثروات العالية وقادة الأعمال، مما يؤكد على الثقة في خبراتي على أعلى المستويات.</p>
                 </div>
                 <div class="bg-card p-8 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/m2vxYv5P/1755328140190.jpg" alt="WORLDEF DUBAI & Forbes" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-2xl font-bold text-accent mb-3" data-lang-key="engagements_worldef_title">WORLDEF DUBAI & Forbes</h3>
                     <p class="text-secondary" data-lang-key="engagements_worldef_desc">مشاركاتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، بالإضافة إلى التقدير من منصات عالمية مثل Forbes، تعكس التزامي بدعم الابتكار في القطاعات الحيوية.</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/9FHcWjFW/1aff6a20-31b7-4dfa-b187-1718e2597626.jpg" alt="IBNG AI Event" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_ibng_title">IBNG AI Event</h3>
                     <p class="text-secondary text-sm" data-lang-key="engagements_ibng_desc">متحدث في فعالية IBNG AI، حيث قدمت عرضًا بعنوان "الذكاء الاصطناعي للأعمال: تحويل المستقبل".</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/9FQJwDf1/Screenshot-2025-07-07-214606.png" alt="Media Expert" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_media_title">خبير إعلامي</h3>
                     <p class="text-secondary text-sm" data-lang-key="engagements_media_desc">ضيف دائم ومحلل موثوق في العديد من البرامج التلفزيونية، لمناقشة أحدث الاتجاهات في التكنولوجيا والذكاء الاصطناعي.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/2SJcDCrG/Whats-App-Image-2025-08-21-at-1-00-23-PM.jpg" alt="Arab AI Community (AAIC)" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_aaic_title">عضوية المجتمع العربي للذكاء الاصطناعي</h3>
                     <p class="text-secondary text-sm" data-lang-key="engagements_aaic_desc">عضو في مجتمع الخبراء الرواد بالمنطقة، للمساهمة في تطوير منظومة الذكاء الاصطناعي العربية.</p>
                 </div>
@@ -183,7 +203,7 @@
         </section>
 
         <section class="py-20 fade-in-section">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                     <p class="text-5xl font-extrabold gradient-text mb-2" data-count="15">0</p>
                     <p class="text-secondary" data-lang-key="stat_exp">سنة من الخبرة</p>
@@ -211,8 +231,12 @@
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="about_title">شريكك نحو التميز في عالم الذكاء الاصطناعي</h2>
-                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.</p>
-                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.</p>
+                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">
+                        بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.
+                    </p>
+                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">
+                        أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.
+                    </p>
                 </div>
             </div>
         </section>
@@ -232,7 +256,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="expertise" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="expertise_title">مجالات الخبرة والتدريب</h2>
             <div class="flex flex-wrap justify-center gap-4 text-lg">
@@ -245,24 +269,27 @@
             </div>
         </section>
 
-        <!-- Companies & Work (reordered, Arabian tours removed) -->
+        <!-- Companies & Work (logos added, Arabian tours removed) -->
         <section id="projects" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="projects_title">الشركات والأعمال</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/qv7H1Bvv/Untitled-design-43.png" alt="grow50x.ai logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_grow50x_title">grow50x.ai</h3>
                     <p class="text-secondary" data-lang-key="project_grow50x_desc">شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/ydcMDkvv/54.png" alt="ToolsWorld.ai logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_toolsworld_title">ToolsWorld.ai</h3>
                     <p class="text-secondary" data-lang-key="project_toolsworld_desc">أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700">
+                    <img src="https://i.postimg.cc/QMs52zvC/Untitled-design-44.png" alt="DigitalMSA.com logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_digitalmsa_title">DigitalMSA.com</h3>
                     <p class="text-secondary" data-lang-key="project_digitalmsa_desc">شركة تسويق إلكتروني وتصميم مواقع متخصصة في مساعدة الشركات على بناء علامتها التجارية على الإنترنت.</p>
                 </div>
-                <!-- Make DubaiDecorWorld last -->
                 <div class="bg-card p-6 rounded-lg border border-gray-700 md:col-span-2 lg:col-span-1">
+                    <img src="https://i.postimg.cc/XY2GPvKH/Untitled-design-45.png" alt="DubaiDecorWorld.com logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_dubaidecor_title">DubaiDecorWorld.com</h3>
                     <p class="text-secondary" data-lang-key="project_dubaidecor_desc">شركة ديكور وتصميم داخلي تختص بتصميم المشاريع الهندسية وتنفيذ ورق الجدران والستائر.</p>
                 </div>
@@ -313,7 +340,9 @@
 
         <section id="contact" class="py-20 text-center fade-in-section">
             <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="contact_title">هل أنت مستعد للخطوة التالية؟</h2>
-            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.</p>
+            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">
+                سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.
+            </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a id="whatsapp-consult" href="https://wa.me/971526671197?text=أرغب%20في%20حجز%20استشارة%20استراتيجية%20حول%20الذكاء%20الاصطناعي." target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp"></i>
@@ -329,8 +358,11 @@
 
     <footer class="py-6 border-t border-gray-800">
         <div class="container mx-auto text-center text-gray-500">
-            <div class="flex justify-center space-x-6 space-x-reverse mb-4">
-                <a href="https://www.linkedin.com/in/hishamdakkak/" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin-in text-2xl"></i></a>
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://www.linkedin.com/in/hishamdakkak/" target="_blank" class="hover:text-accent transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                <a href="https://www.instagram.com/hisham_dakkak?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-accent transition" aria-label="Instagram"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="https://www.tiktok.com/@hishamdakkak0?is_from_webapp=1&sender_device=pc" target="_blank" class="hover:text-accent transition" aria-label="TikTok"><i class="fab fa-tiktok text-2xl"></i></a>
+                <a href="mailto:Hisham@toolsworld.ai" class="hover:text-accent transition" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
             </div>
             <p data-lang-key="footer_text">&copy; 2025 Hisham Dakkak. جميع الحقوق محفوظة.</p>
         </div>
@@ -339,7 +371,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Compute nav height for proper hero sizing on desktop
+            // nav height var for hero sizing
             const nav = document.querySelector('nav');
             if (nav) {
                 const setNavH = () => document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
@@ -497,23 +529,33 @@
                 });
             }
             
-            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => { btn.addEventListener('click', toggleTheme); });
+            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => {
+                btn.addEventListener('click', toggleTheme);
+            });
 
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                    if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             });
 
             const sections = document.querySelectorAll('.fade-in-section');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
             }, { threshold: 0.1 });
             sections.forEach(section => observer.observe(section));
 
@@ -521,14 +563,22 @@
             const statsObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const el = entry.target; const target = +el.dataset.count; let current = 0;
-                        const duration = 2000; const stepTime = Math.max(1, Math.floor(duration / target));
+                        const el = entry.target;
+                        const target = +el.dataset.count;
+                        let current = 0;
+                        const duration = 2000;
+                        const stepTime = Math.max(1, Math.floor(duration / target));
                         const increment = Math.ceil(target / (duration / stepTime));
+                        
                         const timer = setInterval(() => {
                             current += increment;
-                            if (current >= target) { current = target; clearInterval(timer); }
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
                             el.textContent = current;
                         }, stepTime);
+                        
                         observer.unobserve(el);
                     }
                 });
@@ -536,7 +586,8 @@
             stats.forEach(stat => statsObserver.observe(stat));
 
             new Swiper('.heroSwiper', {
-                effect: 'fade', fadeEffect: { crossFade: true },
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
                 loop: true,
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 allowTouchMove: false,
@@ -550,7 +601,14 @@
                 autoplay: { delay: 7000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                on: { slideChange: function () { this.slides.forEach(slide => { const v = slide.querySelector('video'); if (v) v.pause(); }); } }
+                on: {
+                    slideChange: function () {
+                        this.slides.forEach(slide => {
+                            const video = slide.querySelector('video');
+                            if (video) video.pause();
+                        });
+                    }
+                }
             });
 
             new Swiper('.testimonialSwiper', {
