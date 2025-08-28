@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO and Social Media Meta Tags -->
-    <title>Hisham Dakkak - خبير ومستشار الذكاء الاصطناعي في الإمارات</title>
-    <meta name="description" content="هشام الدقاق، خبير ومستشار في استراتيجيات الذكاء الاصطناعي. أقدم استشارات وبرامج تدريبية متخصصة لمساعدة الشركات في الإمارات على تحقيق النمو والريادة في العصر الرقمي.">
-    
+    <title>Hisham Dakkak | خبير ذكاء اصطناعي وأتمتة</title>
+    <meta name="description" content="هشام الدقاق: خبير واستشاري ذكاء اصطناعي وأتمتة. أساعد الشركات على تحويل الذكاء الاصطناعي إلى قيمة عملية عبر الاستشارات الاستراتيجية والبرامج التدريبية المتخصصة.">
+
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hisham Dakkak - خبير ومستشار الذكاء الاصطناعي في الإمارات">
-    <meta property="og:description" content="أساعد الشركات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.">
+    <meta property="og:title" content="Hisham Dakkak | خبير ذكاء اصطناعي وأتمتة">
+    <meta property="og:description" content="أتمتة حتى 80% من مهام عملك. حلول عملية للنمو عبر الذكاء الاصطناعي: استشارات استراتيجية وبرامج تدريبية متخصصة.">
     <meta property="og:image" content="https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg">
     <meta property="og:url" content="https://hishamdakkak.com">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hisham Dakkak - خبير ومستشار الذكاء الاصطناعي في الإمارات">
-    <meta name="twitter:description" content="أساعد الشركات على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.">
+    <meta name="twitter:title" content="Hisham Dakkak | AI & Automation Advisor">
+    <meta name="twitter:description" content="Automate up to 80% of your workflows. Practical AI strategy and hands-on training for real growth.">
     <meta name="twitter:image" content="https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,63 +34,51 @@
             --accent-dark: #f97316; --accent-dark-hover: #ea580c;
             --accent-light: #2563eb; --accent-light-hover: #1d4ed8;
         }
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-dark-secondary);
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .bg-card { background-color: var(--card-dark); transition: background-color 0.3s; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-dark); color: var(--text-dark-secondary); transition: background-color .3s, color .3s; }
+        .bg-card { background-color: var(--card-dark); transition: background-color .3s, transform .3s, box-shadow .3s; }
         .text-accent { color: var(--accent-dark); }
         .border-accent { border-color: var(--accent-dark); }
         .bg-accent { background-color: var(--accent-dark); }
         .hover\:bg-accent-hover:hover { background-color: var(--accent-dark-hover); }
-        .text-primary { color: var(--text-dark-primary); transition: color 0.3s; }
-        .text-secondary { color: var(--text-dark-secondary); transition: color 0.3s; }
-        .gradient-text {
-            background: linear-gradient(90deg, #fb923c, #f97316);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+        .text-primary { color: var(--text-dark-primary); transition: color .3s; }
+        .text-secondary { color: var(--text-dark-secondary); transition: color .3s; }
+        .gradient-text { background: linear-gradient(90deg, #fb923c, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity .8s ease-out, transform .8s ease-out; }
         .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
         .swiper-pagination-bullet-active { background-color: var(--accent-dark) !important; }
         .swiper-button-next, .swiper-button-prev { color: var(--accent-dark) !important; }
+
+        /* Subtle card lift */
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.25); border-color: var(--accent-dark) !important; }
 
         /* HERO */
         .hero-carousel { min-height: calc(100svh - var(--nav-h, 64px)); width: 100%; position: relative; background:#000; overflow:hidden; }
         .swiper-slide video { width: 100%; height: 100%; object-fit: cover; background:#000; }
         .hero-overlay { position: absolute; inset: 0; background: rgba(17, 24, 39, 0.68); z-index: 2; display: flex; align-items: center; justify-content: center; text-align:center; padding: 0 1rem; }
-        .hero-overlay h1{font-size:clamp(2rem,6vw,3.75rem);line-height:1.2;color:#fff;font-weight:800;margin-bottom:1rem}
-        .hero-overlay p{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.6;color:#e5e7eb;margin-bottom:1.25rem}
-        .hero-overlay a{background:#f97316;color:#fff;font-weight:bold;padding:.85rem 2rem;border-radius:.6rem;display:inline-block;transition:background .3s}
-        .hero-overlay a:hover{background:#ea580c}
+        .hero-overlay h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.2;color:#fff;font-weight:800;margin-bottom:1rem}
+        .hero-overlay p{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.7;color:#e5e7eb;margin-bottom:1.25rem}
+        .hero-overlay a{background:#f97316;color:#fff;font-weight:bold;padding:.85rem 2rem;border-radius:.6rem;display:inline-block;transition:transform .25s, background .3s}
+        .hero-overlay a:hover{background:#ea580c; transform: translateY(-2px)}
 
-        /* Company logo in cards */
+        /* Logos and media */
         .company-logo{width:100%; height:68px; object-fit:contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,.2)); margin-bottom:.75rem}
-
-        /* Engagement images */
         .eng-img{width:100%; height:180px; object-fit:cover; border-radius:.5rem; margin-bottom:.75rem}
+        .brand-logo{width:120px; height:auto; object-fit:contain}
 
-        /* Site brand logo */
-        .brand-logo{width:36px; height:36px; object-fit:contain}
+        /* Accessibility */
+        .focus-ring:focus { outline: 3px solid var(--accent-dark); outline-offset: 3px; }
 
-        /* Mobile: avoid crop/distortion & keep text rhythm */
+        /* Mobile adjustments */
         @media (max-width: 768px) {
             .hero-carousel { min-height: unset; height: auto; }
             .heroSwiper { height: auto; }
             .swiper-slide video { width:100%; height:auto; object-fit: contain; background:#000; }
             .hero-overlay { position: static; background: rgba(17, 24, 39, 0.75); padding: clamp(16px, 6vh, 32px) 16px; }
-            .hero-overlay h1 { font-size: clamp(1.6rem, 6.2vw, 2.6rem); line-height: 1.25; }
-            .hero-overlay p  { font-size: clamp(.95rem, 3.2vw, 1.125rem); }
             .eng-img{height:160px}
         }
 
-        /* Light Mode Styles */
+        /* Light Mode */
         body.light-mode { background-color: var(--bg-light); color: var(--text-light-secondary); }
         body.light-mode .bg-card { background-color: var(--card-light); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05); }
         body.light-mode .text-primary { color: var(--text-light-primary); }
@@ -109,15 +97,20 @@
         body.light-mode .gradient-text { background: linear-gradient(90deg, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         body.light-mode .swiper-pagination-bullet-active { background-color: var(--accent-light) !important; }
         body.light-mode .swiper-button-next, body.light-mode .swiper-button-prev { color: var(--accent-light) !important; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in-section, .card-hover, .hero-overlay a { transition: none !important; }
+        }
     </style>
 </head>
 <body class="bg-gray-900">
 
     <nav class="bg-gray-900/70 backdrop-blur-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3 text-2xl font-bold text-primary" data-lang-key="nav_brand">
+            <!-- Brand: show logo only, keep accessible name -->
+            <a href="#" class="flex items-center gap-3 focus-ring" aria-label="Hisham Dakkak">
                 <img src="https://i.postimg.cc/Bv3dyxss/Untitled-design-49.png" alt="Hisham Dakkak Logo" class="brand-logo" onerror="this.style.display='none'">
-                Hisham Dakkak
+                <span class="sr-only">Hisham Dakkak</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_about">عن هشام</a>
@@ -125,11 +118,11 @@
                 <a href="#projects" class="text-gray-300 hover:text-accent transition" data-lang-key="nav_projects">المشاريع</a>
                 <a href="#contact" class="border border-accent text-accent px-4 py-2 rounded-md hover:bg-accent/10 transition" data-lang-key="nav_contact">تواصل معي</a>
                 <div class="flex items-center gap-4">
-                    <button id="theme-toggle" class="text-gray-300 hover:text-accent text-xl"><i class="fas fa-sun"></i></button>
-                    <button id="lang-toggle" class="text-gray-300 hover:text-accent font-bold">EN</button>
+                    <button id="theme-toggle" class="text-gray-300 hover:text-accent text-xl" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+                    <button id="lang-toggle" class="text-gray-300 hover:text-accent font-bold" aria-label="Switch language">EN</button>
                 </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-primary text-2xl">
+            <button id="mobile-menu-button" class="md:hidden text-primary text-2xl" aria-label="Open menu">
                  <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -139,8 +132,8 @@
               <a href="#projects" class="block py-2 text-gray-300 hover:text-accent" data-lang-key="nav_projects_mob">المشاريع</a>
               <a href="#contact" class="block mt-2 border border-accent text-accent px-4 py-2 rounded-md hover:bg-accent/10 text-center" data-lang-key="nav_contact_mob">تواصل معي</a>
               <div class="flex items-center justify-center gap-6 mt-4">
-                <button id="theme-toggle-mob" class="text-gray-300 hover:text-accent text-xl"><i class="fas fa-sun"></i></button>
-                <button id="lang-toggle-mob" class="text-gray-300 hover:text-accent font-bold">EN</button>
+                <button id="theme-toggle-mob" class="text-gray-300 hover:text-accent text-xl" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+                <button id="lang-toggle-mob" class="text-gray-300 hover:text-accent font-bold" aria-label="Switch language">EN</button>
             </div>
         </div>
     </nav>
@@ -151,17 +144,14 @@
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550771/Cover_video_bbu6ht.mp4" autoplay muted loop playsinline></video></div>
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755550970/Cover_video2_zyouju.mp4" autoplay muted loop playsinline></video></div>
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551594/Untitled_design_17_esj57t.mp4" autoplay muted loop playsinline></video></div>
-                <!-- Added new cover video at the end -->
                 <div class="swiper-slide"><video src="https://res.cloudinary.com/dsur4ip9g/video/upload/v1755551596/Untitled_design_20_u7kyex.mp4" autoplay muted loop playsinline></video></div>
             </div>
         </div>
         <div class="hero-overlay">
             <div class="text-center text-white px-6">
-                <h1 class="font-extrabold" data-lang-key="hero_title">أتمتة ما يصل إلى 80% من أعمال شركتك</h1>
-                <p class="max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">
-                    أساعدك على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.
-                </p>
-                <a href="#contact" data-lang-key="hero_cta">ابدأ رحلتك الآن</a>
+                <h1 class="font-extrabold" data-lang-key="hero_title">أتمتة حتى 80% من مهام عملك</h1>
+                <p class="max-w-3xl mx-auto mb-8" data-lang-key="hero_subtitle">أساعدك على تحويل تحديات الذكاء الاصطناعي إلى قيمة عملية ونمو حقيقي عبر استشارات استراتيجية وبرامج تدريبية متخصصة.</p>
+                <a href="#contact" data-lang-key="hero_cta">ابدأ رحلتك اليوم</a>
             </div>
         </div>
     </header>
@@ -169,35 +159,35 @@
     <main class="container mx-auto px-6">
 
         <section id="engagements" class="py-20 fade-in-section">
-            <h2 class="text-3xl font-bold text-center text-primary mb-4" data-lang-key="engagements_title">خبراتي ومشاركاتي</h2>
-            <p class="text-center text-secondary max-w-3xl mx-auto mb-12" data-lang-key="engagements_subtitle">أؤمن بمشاركة المعرفة وبناء جسور التواصل. أفخر بمشاركاتي في فعاليات رائدة تساهم في تشكيل مستقبل التكنولوجيا في المنطقة.</p>
+            <h2 class="text-3xl font-bold text-center text-primary mb-4" data-lang-key="engagements_title">خبراتي ومشاركتي</h2>
+            <p class="text-center text-secondary max-w-3xl mx-auto mb-12" data-lang-key="engagements_subtitle">أؤمن بقوة المعرفة المشتركة وأعتبرها أساس بناء مستقبل رقمي مستدام. لذلك، شاركت في فعاليات رائدة محليًا وعالميًا.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div class="bg-card p-8 rounded-lg border border-gray-700">
+                <div class="bg-card p-8 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/PxMk6CYN/RAM00473.jpg" alt="HSBC Middle East Investment Outlook" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-2xl font-bold text-accent mb-3" data-lang-key="engagements_hsbc_title">HSBC Middle East Investment Outlook</h3>
-                    <p class="text-secondary" data-lang-key="engagements_hsbc_desc">كان لي شرف تقديم رؤى استراتيجية حول تأثير الذكاء الاصطناعي على الاستثمارات المستقبلية، في جلسة حصرية أمام نخبة من كبار عملاء البنك ذوي الثروات العالية وقادة الأعمال، مما يؤكد على الثقة في خبراتي على أعلى المستويات.</p>
+                    <p class="text-secondary" data-lang-key="engagements_hsbc_desc">قدمت رؤى استراتيجية حول دور الذكاء الاصطناعي في تشكيل مستقبل الاستثمارات أمام نخبة من كبار العملاء وقادة الأعمال.</p>
                 </div>
-                <div class="bg-card p-8 rounded-lg border border-gray-700">
+                <div class="bg-card p-8 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/m2vxYv5P/1755328140190.jpg" alt="WORLDEF DUBAI & Forbes" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-2xl font-bold text-accent mb-3" data-lang-key="engagements_worldef_title">WORLDEF DUBAI & Forbes</h3>
-                    <p class="text-secondary" data-lang-key="engagements_worldef_desc">مشاركاتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، بالإضافة إلى التقدير من منصات عالمية مثل Forbes، تعكس التزامي بدعم الابتكار في القطاعات الحيوية.</p>
+                    <p class="text-secondary" data-lang-key="engagements_worldef_desc">مشاركتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، إلى جانب التقدير من منصات عالمية مثل Forbes، تعكس التزامًا دائمًا بدعم الابتكار.</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/9FHcWjFW/1aff6a20-31b7-4dfa-b187-1718e2597626.jpg" alt="IBNG AI Event" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_ibng_title">IBNG AI Event</h3>
-                    <p class="text-secondary text-sm" data-lang-key="engagements_ibng_desc">متحدث في فعالية IBNG AI، حيث قدمت عرضًا بعنوان "الذكاء الاصطناعي للأعمال: تحويل المستقبل".</p>
+                    <p class="text-secondary text-sm" data-lang-key="engagements_ibng_desc">قدمت عرضًا بعنوان "الذكاء الاصطناعي للأعمال: تحويل المستقبل" مع تركيز على التطبيقات العملية.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/9FQJwDf1/Screenshot-2025-07-07-214606.png" alt="Media Expert" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_media_title">خبير إعلامي</h3>
-                    <p class="text-secondary text-sm" data-lang-key="engagements_media_desc">ضيف دائم ومحلل موثوق في العديد من البرامج التلفزيونية، لمناقشة أحدث الاتجاهات في التكنولوجيا والذكاء الاصطناعي.</p>
+                    <p class="text-secondary text-sm" data-lang-key="engagements_media_desc">ضيف ومحلل منتظم في برامج تلفزيونية لمناقشة أحدث اتجاهات التكنولوجيا والذكاء الاصطناعي.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/2SJcDCrG/Whats-App-Image-2025-08-21-at-1-00-23-PM.jpg" alt="Arab AI Community (AAIC)" class="eng-img" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="engagements_aaic_title">عضوية المجتمع العربي للذكاء الاصطناعي</h3>
-                    <p class="text-secondary text-sm" data-lang-key="engagements_aaic_desc">عضو في مجتمع الخبراء الرواد بالمنطقة، للمساهمة في تطوير منظومة الذكاء الاصطناعي العربية.</p>
+                    <p class="text-secondary text-sm" data-lang-key="engagements_aaic_desc">عضو في مجتمع خبراء رائدين على مستوى المنطقة، للمساهمة في تطوير منظومة الذكاء الاصطناعي العربية.</p>
                 </div>
             </div>
         </section>
@@ -231,12 +221,9 @@
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="about_title">شريكك نحو التميز في عالم الذكاء الاصطناعي</h2>
-                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">
-                        بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.
+                    <p class="text-secondary mb-4 leading-relaxed" data-lang-key="about_p1">بصفتي مؤسس ToolsWorld.ai ورئيس الشراكات التسويقية في LikeCard، أعمل على تبسيط التقنيات المعقدة وتحويلها إلى أدوات عملية للنمو. قدّمت استشارات لشركات كبرى وشاركت كمتحدث في فعاليات رائدة.
                     </p>
-                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">
-                        أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.
-                    </p>
+                    <p class="text-secondary leading-relaxed" data-lang-key="about_p2">أؤمن أن النجاح لا يكمن في امتلاك الأدوات فقط، بل في دمجها بذكاء داخل العمل لخلق قيمة حقيقية وميزة تنافسية مستدامة.</p>
                 </div>
             </div>
         </section>
@@ -244,15 +231,15 @@
         <section id="services" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="services_title">كيف يمكنني مساعدتك؟</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-card p-8 rounded-lg border border-gray-700 hover:border-accent transition">
-                    <i class="fas fa-briefcase text-accent text-4xl mb-6"></i>
+                <div class="bg-card p-8 rounded-lg border border-gray-700 hover:border-accent transition card-hover">
+                    <i class="fas fa-briefcase text-accent text-4xl mb-6" aria-hidden="true"></i>
                     <h3 class="text-2xl font-bold text-primary mb-3" data-lang-key="services_consulting_title">استشارات استراتيجية</h3>
-                    <p class="text-secondary" data-lang-key="services_consulting_desc">أعمل معك لوضع خارطة طريق واضحة لتبني الذكاء الاصطناعي، من تحديد حالات الاستخدام الأعلى قيمة إلى قياس العائد على الاستثمار وضمان التطبيق المسؤول.</p>
+                    <p class="text-secondary" data-lang-key="services_consulting_desc">خارطة طريق واضحة لتبنّي الذكاء الاصطناعي: تحديد أولويات الاستخدام، قياس العائد على الاستثمار، وضمان التنفيذ المسؤول.</p>
                 </div>
-                <div class="bg-card p-8 rounded-lg border border-gray-700 hover:border-accent transition">
-                    <i class="fas fa-users text-accent text-4xl mb-6"></i>
+                <div class="bg-card p-8 rounded-lg border border-gray-700 hover:border-accent transition card-hover">
+                    <i class="fas fa-users text-accent text-4xl mb-6" aria-hidden="true"></i>
                     <h3 class="text-2xl font-bold text-primary mb-3" data-lang-key="services_training_title">برامج تدريبية متخصصة</h3>
-                    <p class="text-secondary" data-lang-key="services_training_desc">ورش عمل ودورات تدريبية مصممة لتمكين فريق عملك بالمهارات العملية اللازمة للنجاح في عصر الذكاء الاصطناعي، مخصصة لقطاعات مثل القانون، العقارات، والتسويق.</p>
+                    <p class="text-secondary" data-lang-key="services_training_desc">ورش عملية تُكسب فريقك مهارات تطبيقية في قطاعات القانون والقطاع المالي والرعاية الصحية والعقارات والتسويق.</p>
                 </div>
             </div>
         </section>
@@ -260,38 +247,38 @@
         <section id="expertise" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="expertise_title">مجالات الخبرة والتدريب</h2>
             <div class="flex flex-wrap justify-center gap-4 text-lg">
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_1">القطاع القانوني</span>
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_2">القطاع المالي</span>
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_3">الرعاية الصحية</span>
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_4">العقارات والتسويق</span>
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_5">استراتيجيات AI للشركات</span>
-                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700" data-lang-key="expertise_6">الذكاء الاصطناعي التوليدي</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">القطاع القانوني</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">القطاع المالي</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">الرعاية الصحية</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">العقارات والتسويق</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">استراتيجيات AI للشركات</span>
+                <span class="bg-card text-secondary px-5 py-2 rounded-full border border-gray-700">الذكاء الاصطناعي التوليدي</span>
             </div>
         </section>
 
-        <!-- Companies & Work (logos added, Arabian tours removed) -->
+        <!-- Companies & Work -->
         <section id="projects" class="py-20 fade-in-section">
             <h2 class="text-3xl font-bold text-center text-primary mb-12" data-lang-key="projects_title">الشركات والأعمال</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/qv7H1Bvv/Untitled-design-43.png" alt="grow50x.ai logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_grow50x_title">grow50x.ai</h3>
-                    <p class="text-secondary" data-lang-key="project_grow50x_desc">شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.</p>
+                    <p class="text-secondary" data-lang-key="project_grow50x_desc">حلول نمو تعتمد على الذكاء الاصطناعي لتحويل الأعمال رقميًا وأتمتة المهام.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/ydcMDkvv/54.png" alt="ToolsWorld.ai logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_toolsworld_title">ToolsWorld.ai</h3>
-                    <p class="text-secondary" data-lang-key="project_toolsworld_desc">أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.</p>
+                    <p class="text-secondary" data-lang-key="project_toolsworld_desc">دليل أدوات ذكاء اصطناعي بعدة لغات يساعد الفرق على اكتشاف الأدوات وتقييمها.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/QMs52zvC/Untitled-design-44.png" alt="DigitalMSA.com logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_digitalmsa_title">DigitalMSA.com</h3>
-                    <p class="text-secondary" data-lang-key="project_digitalmsa_desc">شركة تسويق إلكتروني وتصميم مواقع متخصصة في مساعدة الشركات على بناء علامتها التجارية على الإنترنت.</p>
+                    <p class="text-secondary" data-lang-key="project_digitalmsa_desc">تسويق رقمي وتصميم مواقع لبناء حضور وعلامة تجارية قوية عبر الإنترنت.</p>
                 </div>
-                <div class="bg-card p-6 rounded-lg border border-gray-700 md:col-span-2 lg:col-span-1">
+                <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover md:col-span-2 lg:col-span-1">
                     <img src="https://i.postimg.cc/XY2GPvKH/Untitled-design-45.png" alt="DubaiDecorWorld.com logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_dubaidecor_title">DubaiDecorWorld.com</h3>
-                    <p class="text-secondary" data-lang-key="project_dubaidecor_desc">شركة ديكور وتصميم داخلي تختص بتصميم المشاريع الهندسية وتنفيذ ورق الجدران والستائر.</p>
+                    <p class="text-secondary" data-lang-key="project_dubaidecor_desc">حلول تصميم داخلي وتنفيذ ورق الجدران والستائر للمشاريع الهندسية.</p>
                 </div>
             </div>
         </section>
@@ -316,20 +303,20 @@
             <div class="swiper testimonialSwiper max-w-3xl mx-auto">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide text-center bg-card p-8 rounded-lg">
-                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
-                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_1_text">"كانت استشارة هشام نقطة تحول حقيقية لأعمالنا. لقد ساعدني على رؤية إمكانيات الذكاء الاصطناعي بطريقة عملية وقابلة للتنفيذ."</p>
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4" aria-hidden="true"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_1_text">"كانت استشارة هشام نقطة تحول حقيقية. جعل إمكانات الذكاء الاصطناعي قابلة للتطبيق فورًا."</p>
                         <p class="text-primary font-bold" data-lang-key="testimonial_1_name">أحمد المرزوقي</p>
                         <p class="text-secondary text-sm" data-lang-key="testimonial_1_title">مدير تنفيذي، شركة تقنية</p>
                     </div>
                     <div class="swiper-slide text-center bg-card p-8 rounded-lg">
-                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
-                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_2_text">"ورشة العمل كانت ممتازة. المحتوى كان غنيًا والمدرب متمكن. خرج فريقي بمهارات جديدة وأفكار مبتكرة."</p>
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4" aria-hidden="true"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_2_text">"ورشة عمل ممتازة. محتوى غني وتطبيق عملي. خرج فريقنا بأفكار قابلة للتنفيذ."</p>
                         <p class="text-primary font-bold" data-lang-key="testimonial_2_name">فاطمة الشامسي</p>
-                        <p class="text-secondary text-sm" data-lang-key="testimonial_2_title">رئيسة قسم التسويق، شركة عقارية</p>
+                        <p class="text-secondary text-sm" data-lang-key="testimonial_2_title">رئيسة تسويق، شركة عقارية</p>
                     </div>
                     <div class="swiper-slide text-center bg-card p-8 rounded-lg">
-                        <i class="fas fa-quote-right text-accent text-3xl mb-4"></i>
-                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_3_text">"لم أكن أتوقع أن تكون تطبيقات الذكاء الاصطناعي بهذه البساطة والفعالية. شكراً هشام على تبسيط المفاهيم المعقدة."</p>
+                        <i class="fas fa-quote-right text-accent text-3xl mb-4" aria-hidden="true"></i>
+                        <p class="text-secondary text-lg mb-6" data-lang-key="testimonial_3_text">"تبسيط رائع للمفاهيم المعقدة ونتائج ملموسة في الكفاءة."</p>
                         <p class="text-primary font-bold" data-lang-key="testimonial_3_name">سارة عبدالله</p>
                         <p class="text-secondary text-sm" data-lang-key="testimonial_3_title">محامية، مكتب محاماة</p>
                     </div>
@@ -340,16 +327,14 @@
 
         <section id="contact" class="py-20 text-center fade-in-section">
             <h2 class="text-3xl font-bold text-primary mb-4" data-lang-key="contact_title">هل أنت مستعد للخطوة التالية؟</h2>
-            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">
-                سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.
-            </p>
+            <p class="text-secondary max-w-2xl mx-auto mb-8" data-lang-key="contact_subtitle">سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، يسعدني أن أكون شريكك.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a id="whatsapp-consult" href="https://wa.me/971526671197?text=أرغب%20في%20حجز%20استشارة%20استراتيجية%20حول%20الذكاء%20الاصطناعي." target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp"></i>
+                <a id="whatsapp-consult" href="https://wa.me/971526671197?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A." target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-hover transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     <span data-lang-key="contact_cta1">حجز استشارة</span>
                 </a>
-                <a id="whatsapp-media" href="https://wa.me/971526671197?text=أرغب%20في%20التواصل%20بخصوص%20فرصة%20إعلامية%20أو%20مقابلة." target="_blank" class="border-2 border-gray-600 text-secondary font-bold py-3 px-8 rounded-md text-lg hover:bg-gray-700 hover:border-gray-700 transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
-                    <i class="fas fa-microphone-alt"></i>
+                <a id="whatsapp-media" href="https://wa.me/971526671197?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D9%81%D8%B1%D8%B5%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%85%D9%8A%D8%A9%20%D8%A3%D9%88%20%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9." target="_blank" class="border-2 border-gray-600 text-secondary font-bold py-3 px-8 rounded-md text-lg hover:bg-gray-700 hover:border-gray-700 transition duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
+                    <i class="fas fa-microphone-alt" aria-hidden="true"></i>
                     <span data-lang-key="contact_cta2">للاستشارات أو المقابلات</span>
                 </a>
             </div>
@@ -364,7 +349,7 @@
                 <a href="https://www.tiktok.com/@hishamdakkak0?is_from_webapp=1&sender_device=pc" target="_blank" class="hover:text-accent transition" aria-label="TikTok"><i class="fab fa-tiktok text-2xl"></i></a>
                 <a href="mailto:Hisham@toolsworld.ai" class="hover:text-accent transition" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
             </div>
-            <p data-lang-key="footer_text">&copy; 2025 Hisham Dakkak. جميع الحقوق محفوظة.</p>
+            <p data-lang-key="footer_text">© 2025 Hisham Dakkak. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
@@ -379,101 +364,100 @@
                 window.addEventListener('resize', setNavH);
             }
 
+            // Updated translations (AR/EN) aligned with refined tone
             const translations = {
                 ar: {
-                    nav_brand: "Hisham Dakkak", nav_about: "عن هشام", nav_services: "الخدمات", nav_projects: "المشاريع", nav_contact: "تواصل معي",
+                    nav_about: "عن هشام", nav_services: "الخدمات", nav_projects: "المشاريع", nav_contact: "تواصل معي",
                     nav_about_mob: "عن هشام", nav_services_mob: "الخدمات", nav_projects_mob: "المشاريع", nav_contact_mob: "تواصل معي",
-                    hero_title: "أتمتة ما يصل إلى 80% من أعمال شركتك",
-                    hero_subtitle: "أساعدك على تحويل تحديات الذكاء الاصطناعي إلى فرص نمو حقيقية من خلال استشارات استراتيجية وبرامج تدريبية متخصصة.",
-                    hero_cta: "ابدأ رحلتك الآن",
-                    engagements_title: "خبراتي ومشاركاتي",
-                    engagements_subtitle: "أؤمن بمشاركة المعرفة وبناء جسور التواصل. أفخر بمشاركاتي في فعاليات رائدة تساهم في تشكيل مستقبل التكنولوجيا في المنطقة.",
+                    hero_title: "أتمتة حتى 80% من مهام عملك",
+                    hero_subtitle: "أساعدك على تحويل تحديات الذكاء الاصطناعي إلى قيمة عملية ونمو حقيقي عبر استشارات استراتيجية وبرامج تدريبية متخصصة.",
+                    hero_cta: "ابدأ رحلتك اليوم",
+                    engagements_title: "خبراتي ومشاركتي",
+                    engagements_subtitle: "أؤمن بقوة المعرفة المشتركة وأعتبرها أساس بناء مستقبل رقمي مستدام. لذلك، شاركت في فعاليات رائدة محليًا وعالميًا.",
                     engagements_hsbc_title: "HSBC Middle East Investment Outlook",
-                    engagements_hsbc_desc: "كان لي شرف تقديم رؤى استراتيجية حول تأثير الذكاء الاصطناعي على الاستثمارات المستقبلية، في جلسة حصرية أمام نخبة من كبار عملاء البنك ذوي الثروات العالية وقادة الأعمال، مما يؤكد على الثقة في خبراتي على أعلى المستويات.",
+                    engagements_hsbc_desc: "قدمت رؤى استراتيجية حول دور الذكاء الاصطناعي في تشكيل مستقبل الاستثمارات أمام نخبة من كبار العملاء وقادة الأعمال.",
                     engagements_worldef_title: "WORLDEF DUBAI & Forbes",
-                    engagements_worldef_desc: "مشاركاتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، بالإضافة إلى التقدير من منصات عالمية مثل Forbes، تعكس التزامي بدعم الابتكار في القطاعات الحيوية.",
+                    engagements_worldef_desc: "مشاركتي كمتحدث في أكبر معرض للتجارة الإلكترونية في الخليج، إلى جانب التقدير من منصات عالمية مثل Forbes، تعكس التزامًا دائمًا بدعم الابتكار.",
                     engagements_ibng_title: "IBNG AI Event",
-                    engagements_ibng_desc: "متحدث في فعالية IBNG AI، حيث قدمت عرضًا بعنوان 'الذكاء الاصطناعي للأعمال: تحويل المستقبل'.",
+                    engagements_ibng_desc: "قدمت عرضًا بعنوان 'الذكاء الاصطناعي للأعمال: تحويل المستقبل' مع تركيز على التطبيقات العملية.",
                     engagements_media_title: "خبير إعلامي",
-                    engagements_media_desc: "ضيف دائم ومحلل موثوق في العديد من البرامج التلفزيونية، لمناقشة أحدث الاتجاهات في التكنولوجيا والذكاء الاصطناعي.",
+                    engagements_media_desc: "ضيف ومحلل منتظم في برامج تلفزيونية لمناقشة أحدث اتجاهات التكنولوجيا والذكاء الاصطناعي.",
                     engagements_aaic_title: "عضوية المجتمع العربي للذكاء الاصطناعي",
-                    engagements_aaic_desc: "عضو في مجتمع الخبراء الرواد بالمنطقة، للمساهمة في تطوير منظومة الذكاء الاصطناعي العربية.",
+                    engagements_aaic_desc: "عضو في مجتمع خبراء رائدين على مستوى المنطقة، للمساهمة في تطوير منظومة الذكاء الاصطناعي العربية.",
                     stat_exp: "سنة من الخبرة", stat_companies: "شركة تم تدريبها", stat_projects: "مشروع استشاري", stat_trainees: "متدرب ملهم",
                     about_title: "شريكك نحو التميز في عالم الذكاء الاصطناعي",
-                    about_p1: "بصفتي مؤسس ToolsWorld.ai وخبيرًا في استراتيجيات الذكاء الاصطناعي، تتمحور مهمتي حول تبسيط التقنيات المعقدة وجعلها محركًا للنمو الحقيقي. من خلال خبرتي في تقديم الاستشارات لكبرى الشركات والمشاركة كمتحدث في فعاليات رائدة، أقدم رؤى عملية قابلة للتطبيق مباشرة.",
-                    about_p2: "أؤمن بأن النجاح لا يقتصر على تبني التكنولوجيا، بل على فهم كيفية دمجها بذكاء في نسيج عملك لتحقيق ميزة تنافسية مستدامة.",
+                    about_p1: "بصفتي مؤسس ToolsWorld.ai ورئيس الشراكات التسويقية في LikeCard، أعمل على تبسيط التقنيات المعقدة وتحويلها إلى أدوات عملية للنمو. قدّمت استشارات لشركات كبرى وشاركت كمتحدث في فعاليات رائدة.",
+                    about_p2: "أؤمن أن النجاح لا يكمن في امتلاك الأدوات فقط، بل في دمجها بذكاء داخل العمل لخلق قيمة حقيقية وميزة تنافسية مستدامة.",
                     services_title: "كيف يمكنني مساعدتك؟",
                     services_consulting_title: "استشارات استراتيجية",
-                    services_consulting_desc: "أعمل معك لوضع خارطة طريق واضحة لتبني الذكاء الاصطناعي، من تحديد حالات الاستخدام الأعلى قيمة إلى قياس العائد على الاستثمار وضمان التطبيق المسؤول.",
+                    services_consulting_desc: "خارطة طريق واضحة لتبنّي الذكاء الاصطناعي: تحديد أولويات الاستخدام، قياس العائد على الاستثمار، وضمان التنفيذ المسؤول.",
                     services_training_title: "برامج تدريبية متخصصة",
-                    services_training_desc: "ورش عمل ودورات تدريبية مصممة لتمكين فريق عملك بالمهارات العملية اللازمة للنجاح في عصر الذكاء الاصطناعي، مخصصة لقطاعات مثل القانون، العقارات، والتسويق.",
+                    services_training_desc: "ورش عملية تُكسب فريقك مهارات تطبيقية في قطاعات القانون والقطاع المالي والرعاية الصحية والعقارات والتسويق.",
                     expertise_title: "مجالات الخبرة والتدريب",
-                    expertise_1: "القطاع القانوني", expertise_2: "القطاع المالي", expertise_3: "الرعاية الصحية", expertise_4: "العقارات والتسويق", expertise_5: "استراتيجيات AI للشركات", expertise_6: "الذكاء الاصطناعي التوليدي",
                     projects_title: "الشركات والأعمال",
-                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "شركة متخصصة بمساعدة الشركات للتحول الرقمي وأتمتة المهام باستخدام الذكاء الاصطناعي للشركات.",
-                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "أول دليل لأدوات الذكاء الاصطناعي بـ 7 لغات يهدف لمساعدة المستخدمين على اكتشاف وتقييم أدوات الذكاء الاصطناعي.",
-                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "شركة تسويق إلكتروني وتصميم مواقع متخصصة في مساعدة الشركات على بناء علامتها التجارية على الإنترنت.",
-                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "شركة ديكور وتصميم داخلي تختص بتصميم المشاريع الهندسية وتنفيذ ورق الجدران والستائر.",
+                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "حلول نمو تعتمد على الذكاء الاصطناعي لتحويل الأعمال رقميًا وأتمتة المهام.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "دليل أدوات ذكاء اصطناعي بعدة لغات يساعد الفرق على اكتشاف الأدوات وتقييمها.",
+                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "تسويق رقمي وتصميم مواقع لبناء حضور وعلامة تجارية قوية عبر الإنترنت.",
+                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "حلول تصميم داخلي وتنفيذ ورق الجدران والستائر للمشاريع الهندسية.",
                     media_title: "من أعمالي",
                     testimonials_title: "آراء عملائي",
-                    testimonial_1_text: "كانت استشارة هشام نقطة تحول حقيقية لأعمالنا. لقد ساعدني على رؤية إمكانيات الذكاء الاصطناعي بطريقة عملية وقابلة للتنفيذ.",
+                    testimonial_1_text: "كانت استشارة هشام نقطة تحول حقيقية. جعل إمكانات الذكاء الاصطناعي قابلة للتطبيق فورًا.",
                     testimonial_1_name: "أحمد المرزوقي", testimonial_1_title: "مدير تنفيذي، شركة تقنية",
-                    testimonial_2_text: "ورشة العمل كانت ممتازة. المحتوى كان غنيًا والمدرب متمكن. خرج فريقي بمهارات جديدة وأفكار مبتكرة.",
-                    testimonial_2_name: "فاطمة الشامسي", testimonial_2_title: "رئيسة قسم التسويق، شركة عقارية",
-                    testimonial_3_text: "لم أكن أتوقع أن تكون تطبيقات الذكاء الاصطناعي بهذه البساطة والفعالية. شكراً هشام على تبسيط المفاهيم المعقدة.",
+                    testimonial_2_text: "ورشة عمل ممتازة. محتوى غني وتطبيق عملي. خرج فريقنا بأفكار قابلة للتنفيذ.",
+                    testimonial_2_name: "فاطمة الشامسي", testimonial_2_title: "رئيسة تسويق، شركة عقارية",
+                    testimonial_3_text: "تبسيط رائع للمفاهيم المعقدة ونتائج ملموسة في الكفاءة.",
                     testimonial_3_name: "سارة عبدالله", testimonial_3_title: "محامية، مكتب محاماة",
                     contact_title: "هل أنت مستعد للخطوة التالية؟",
-                    contact_subtitle: "سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، أنا هنا لمساعدتك.",
+                    contact_subtitle: "سواء كنت تبحث عن استشارة استراتيجية لتطوير أعمالك، أو ترغب في دعوة خبير للمشاركة في مقابلة إعلامية، يسعدني أن أكون شريكك.",
                     contact_cta1: "حجز استشارة",
                     contact_cta2: "للاستشارات أو المقابلات",
                     footer_text: "© 2025 Hisham Dakkak. جميع الحقوق محفوظة."
                 },
                 en: {
-                    nav_brand: "Hisham Dakkak", nav_about: "About", nav_services: "Services", nav_projects: "Projects", nav_contact: "Contact Me",
+                    nav_about: "About", nav_services: "Services", nav_projects: "Projects", nav_contact: "Contact Me",
                     nav_about_mob: "About", nav_services_mob: "Services", nav_projects_mob: "Projects", nav_contact_mob: "Contact Me",
-                    hero_title: "Automate Up to 80% of Your Company's Operations",
-                    hero_subtitle: "I help you transform AI challenges into real growth opportunities through strategic consulting and specialized training programs.",
-                    hero_cta: "Start Your Journey Now",
-                    engagements_title: "My Expertise & Engagements",
-                    engagements_subtitle: "I believe in sharing knowledge and building bridges. I am proud of my participation in leading events that help shape the future of technology in the region.",
+                    hero_title: "Automate up to 80% of your workflows",
+                    hero_subtitle: "I turn AI challenges into practical value and real growth through strategic consulting and hands-on training.",
+                    hero_cta: "Start your journey today",
+                    engagements_title: "Experience & Engagements",
+                    engagements_subtitle: "I believe shared knowledge is the foundation of a sustainable digital future. I've spoken at leading events locally and globally.",
                     engagements_hsbc_title: "HSBC Middle East Investment Outlook",
-                    engagements_hsbc_desc: "I had the honor of presenting strategic insights on the impact of AI on future investments in an exclusive session for the bank's high-net-worth clients and business leaders, affirming the trust in my expertise at the highest levels.",
+                    engagements_hsbc_desc: "Presented strategic insights on AI's role in shaping the future of investments to select clients and business leaders.",
                     engagements_worldef_title: "WORLDEF DUBAI & Forbes",
-                    engagements_worldef_desc: "My engagements as a speaker at the largest e-commerce exhibition in the Gulf, along with recognition from global platforms like Forbes, reflect my commitment to supporting innovation in vital sectors.",
+                    engagements_worldef_desc: "Speaking at the Gulf's largest e‑commerce expo and recognition by platforms like Forbes reflect a steady commitment to innovation.",
                     engagements_ibng_title: "IBNG AI Event",
-                    engagements_ibng_desc: "Speaker at the IBNG AI Event, presenting on 'AI for Business: Transforming the Future.'",
+                    engagements_ibng_desc: "Delivered 'AI for Business: Transforming the Future' with a focus on real‑world applications.",
                     engagements_media_title: "Media Expert",
-                    engagements_media_desc: "A regular guest and trusted analyst on numerous TV programs, discussing the latest trends in technology and AI.",
+                    engagements_media_desc: "Regular TV guest and analyst discussing the latest in tech and AI.",
                     engagements_aaic_title: "Arab AI Community (AAIC) Member",
-                    engagements_aaic_desc: "Member of a community of leading experts in the region, contributing to the development of the Arab AI ecosystem.",
+                    engagements_aaic_desc: "Member of a leading regional expert community contributing to the Arab AI ecosystem.",
                     stat_exp: "Years of Experience", stat_companies: "Companies Trained", stat_projects: "Consulting Projects", stat_trainees: "Inspired Trainees",
-                    about_title: "Your Partner Towards Excellence in the World of AI",
-                    about_p1: "As the founder of ToolsWorld.ai and an expert in AI strategies, my mission is to simplify complex technologies and make them a driver for real growth. Through my experience consulting for major companies and speaking at leading events, I provide practical, directly applicable insights.",
-                    about_p2: "I believe that success is not just about adopting technology, but about understanding how to intelligently integrate it into the fabric of your business to achieve a sustainable competitive advantage.",
-                    services_title: "How Can I Help You?",
+                    about_title: "Your partner in practical AI",
+                    about_p1: "As founder of ToolsWorld.ai and Head of Marketing Partnerships at LikeCard, I simplify complex tech into practical growth. I consult for major organizations and speak at leading events.",
+                    about_p2: "Success isn't about tools alone—it’s about integrating them intelligently to create real value and lasting advantage.",
+                    services_title: "How can I help?",
                     services_consulting_title: "Strategic Consulting",
-                    services_consulting_desc: "I work with you to develop a clear roadmap for AI adoption, from identifying the highest-value use cases to measuring ROI and ensuring responsible implementation.",
-                    services_training_title: "Specialized Training Programs",
-                    services_training_desc: "Workshops and training courses designed to empower your teams with the practical skills needed to succeed in the age of AI, tailored for sectors like legal, real estate, and marketing.",
-                    expertise_title: "Areas of Expertise & Training",
-                    expertise_1: "Legal Sector", expertise_2: "Financial Sector", expertise_3: "Healthcare", expertise_4: "Real Estate & Marketing", expertise_5: "Corporate AI Strategies", expertise_6: "Generative AI",
+                    services_consulting_desc: "A clear AI adoption roadmap: prioritized use cases, ROI measurement, and responsible implementation.",
+                    services_training_title: "Specialized Training",
+                    services_training_desc: "Hands‑on workshops that equip your teams with applied skills across legal, financial, healthcare, real estate, and marketing sectors.",
+                    expertise_title: "Expertise & Training Areas",
                     projects_title: "Companies & Work",
-                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "A company specializing in helping businesses with digital transformation and task automation using AI.",
-                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "The first 7-language AI tools directory that helps users discover and evaluate AI tools.",
-                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "A digital marketing and web design company specialized in helping businesses build their online brand.",
-                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "An interior design company specializing in engineering project design and implementing wallpapers and curtains.",
+                    project_grow50x_title: "grow50x.ai", project_grow50x_desc: "AI‑driven growth solutions for digital transformation and task automation.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "A multi‑language AI tools directory to help teams discover and evaluate tools.",
+                    project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "Digital marketing and web design to build a strong online brand.",
+                    project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "Interior design solutions including wallpapers and curtains for engineering projects.",
                     media_title: "My Work",
-                    testimonials_title: "What My Clients Say",
-                    testimonial_1_text: "Hisham's consultation was a real turning point for our business. He helped me see the potential of AI in a practical and actionable way.",
+                    testimonials_title: "What Clients Say",
+                    testimonial_1_text: "A real turning point—Hisham made AI potential immediately actionable.",
                     testimonial_1_name: "Ahmed Al Marzooqi", testimonial_1_title: "CEO, Tech Company",
-                    testimonial_2_text: "The workshop was excellent. The content was rich and the trainer was an expert. My team left with new skills and innovative ideas.",
-                    testimonial_2_name: "Fatima Al Shamsi", testimonial_2_title: "Head of Marketing, Real Estate Firm",
-                    testimonial_3_text: "I didn't expect AI applications to be this simple and effective. Thank you Hisham for simplifying complex concepts.",
+                    testimonial_2_text: "Excellent workshop—rich content and practical delivery. The team left with executable ideas.",
+                    testimonial_2_name: "Fatima Al Shamsi", testimonial_2_title: "Head of Marketing, Real Estate",
+                    testimonial_3_text: "Clear simplification of complex topics with tangible efficiency gains.",
                     testimonial_3_name: "Sara Abdullah", testimonial_3_title: "Lawyer, Law Firm",
-                    contact_title: "Are You Ready for the Next Step?",
-                    contact_subtitle: "Whether you're looking for strategic consulting to grow your business, or wish to invite an expert for a media interview, I am here to help.",
+                    contact_title: "Ready for the next step?",
+                    contact_subtitle: "Whether you need strategic consulting or an expert voice for media, I’m glad to partner with you.",
                     contact_cta1: "Book a Consultation",
-                    contact_cta2: "For Media & Interviews",
+                    contact_cta2: "Media & Interviews",
                     footer_text: "© 2025 Hisham Dakkak. All rights reserved."
                 }
             };
@@ -485,17 +469,12 @@
                 currentLang = lang;
                 htmlEl.lang = lang;
                 htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
-                
                 document.querySelectorAll('[data-lang-key]').forEach(el => {
                     const key = el.dataset.langKey;
-                    if (translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
+                    if (translations[lang][key]) el.textContent = translations[lang][key];
                 });
-
                 document.getElementById('lang-toggle').textContent = lang === 'ar' ? 'EN' : 'AR';
                 document.getElementById('lang-toggle-mob').textContent = lang === 'ar' ? 'EN' : 'AR';
-                
                 const consultText = lang === 'ar' ? "أرغب%20في%20حجز%20استشارة%20استراتيجية%20حول%20الذكاء%20الاصطناعي." : "I%20would%20like%20to%20book%20a%20strategic%20consultation%20about%20AI.";
                 const mediaText = lang === 'ar' ? "أرغب%20في%20التواصل%20بخصوص%20فرصة%20إعلامية%20أو%20مقابلة." : "I%20would%20like%20to%20get%20in%20touch%20regarding%20a%20media%20opportunity%20or%20interview.";
                 document.getElementById('whatsapp-consult').href = `https://wa.me/971526671197?text=${consultText}`;
@@ -503,121 +482,61 @@
             }
 
             [document.getElementById('lang-toggle'), document.getElementById('lang-toggle-mob')].forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const newLang = currentLang === 'ar' ? 'en' : 'ar';
-                    switchLanguage(newLang);
-                });
+                btn.addEventListener('click', () => switchLanguage(currentLang === 'ar' ? 'en' : 'ar'));
             });
 
             function toggleTheme() {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
                 const iconClass = isLight ? 'fa-moon' : 'fa-sun';
-                document.querySelectorAll('#theme-toggle i, #theme-toggle-mob i').forEach(icon => {
-                    icon.className = `fas ${iconClass}`;
-                });
-                
-                const gradientTextElements = document.querySelectorAll('.gradient-text');
-                gradientTextElements.forEach(el => {
-                    if (isLight) {
-                        el.style.background = 'linear-gradient(90deg, #60a5fa, #2563eb)';
-                    } else {
-                        el.style.background = 'linear-gradient(90deg, #fb923c, #f97316)';
-                    }
+                document.querySelectorAll('#theme-toggle i, #theme-toggle-mob i').forEach(icon => { icon.className = `fas ${iconClass}`; });
+                document.querySelectorAll('.gradient-text').forEach(el => {
+                    el.style.background = isLight ? 'linear-gradient(90deg, #60a5fa, #2563eb)' : 'linear-gradient(90deg, #fb923c, #f97316)';
                     el.style.webkitBackgroundClip = 'text';
                     el.style.webkitTextFillColor = 'transparent';
                 });
             }
-            
-            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => {
-                btn.addEventListener('click', toggleTheme);
-            });
+            [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mob')].forEach(btn => btn.addEventListener('click', toggleTheme));
 
+            // Mobile menu
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
+            // Smooth scroll close menu
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    if (!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
                 });
             });
 
+            // Fade-in on view
             const sections = document.querySelectorAll('.fade-in-section');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
             }, { threshold: 0.1 });
             sections.forEach(section => observer.observe(section));
 
+            // Animated stats
             const stats = document.querySelectorAll('[data-count]');
             const statsObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const target = +el.dataset.count;
-                        let current = 0;
-                        const duration = 2000;
-                        const stepTime = Math.max(1, Math.floor(duration / target));
-                        const increment = Math.ceil(target / (duration / stepTime));
-                        
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                            }
-                            el.textContent = current;
-                        }, stepTime);
-                        
+                        const el = entry.target; const target = +el.dataset.count; let current = 0; const duration = 1800; const step = Math.max(16, Math.floor(duration / target));
+                        const timer = setInterval(() => { current += Math.ceil(target / (duration / step)); if (current >= target) { current = target; clearInterval(timer); } el.textContent = current; }, step);
                         observer.unobserve(el);
                     }
                 });
             }, { threshold: 0.5 });
             stats.forEach(stat => statsObserver.observe(stat));
 
-            new Swiper('.heroSwiper', {
-                effect: 'fade',
-                fadeEffect: { crossFade: true },
-                loop: true,
-                autoplay: { delay: 5000, disableOnInteraction: false },
-                allowTouchMove: false,
-                autoHeight: true,
-            });
-            
-            new Swiper('.mediaSwiper', {
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 30,
-                autoplay: { delay: 7000, disableOnInteraction: false },
-                pagination: { el: '.swiper-pagination', clickable: true },
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                on: {
-                    slideChange: function () {
-                        this.slides.forEach(slide => {
-                            const video = slide.querySelector('video');
-                            if (video) video.pause();
-                        });
-                    }
-                }
-            });
-
-            new Swiper('.testimonialSwiper', {
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 30,
-                autoplay: { delay: 7000, disableOnInteraction: false },
-                pagination: { el: '.swiper-pagination', clickable: true },
-            });
+            // Swipers
+            new Swiper('.heroSwiper', { effect: 'fade', fadeEffect: { crossFade: true }, loop: true, autoplay: { delay: 5000, disableOnInteraction: false }, allowTouchMove: false, autoHeight: true });
+            new Swiper('.mediaSwiper', { loop: true, slidesPerView: 1, spaceBetween: 30, autoplay: { delay: 7000, disableOnInteraction: false }, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, on: { slideChange() { this.slides.forEach(s => { const v = s.querySelector('video'); if (v) v.pause(); }); } } });
+            new Swiper('.testimonialSwiper', { loop: true, slidesPerView: 1, spaceBetween: 30, autoplay: { delay: 7000, disableOnInteraction: false }, pagination: { el: '.swiper-pagination', clickable: true } });
         });
     </script>
 </body>
