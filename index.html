@@ -21,6 +21,18 @@
     <meta name="twitter:description" content="Automate up to 80% of your workflows. Practical AI strategy and hands-on training for real growth.">
     <meta name="twitter:image" content="https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg">
 
+    <!-- Extra SEO & sharing -->
+    <link rel="canonical" href="https://hishamdakkak.com">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:site_name" content="Hisham Dakkak">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hisham Dakkak - AI & Automation Advisor">
+    <meta name="theme-color" content="#111827">
+    <link rel="icon" href="https://i.postimg.cc/Bv3dyxss/Untitled-design-49.png" sizes="any">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -64,7 +76,7 @@
         /* Logos and media */
         .company-logo{width:100%; height:68px; object-fit:contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,.2)); margin-bottom:.75rem}
         .eng-img{width:100%; height:180px; object-fit:cover; border-radius:.5rem; margin-bottom:.75rem}
-        .brand-logo{width:120px; height:auto; object-fit:contain}
+        .brand-logo{height:44px;width:auto;object-fit:contain;image-rendering:-webkit-optimize-contrast;filter: drop-shadow(0 1px 2px rgba(0,0,0,.35));}
 
         /* Accessibility */
         .focus-ring:focus { outline: 3px solid var(--accent-dark); outline-offset: 3px; }
@@ -76,6 +88,7 @@
             .swiper-slide video { width:100%; height:auto; object-fit: contain; background:#000; }
             .hero-overlay { position: static; background: rgba(17, 24, 39, 0.75); padding: clamp(16px, 6vh, 32px) 16px; }
             .eng-img{height:160px}
+            .brand-logo{height:40px}
         }
 
         /* Light Mode */
@@ -102,14 +115,39 @@
             .fade-in-section, .card-hover, .hero-overlay a { transition: none !important; }
         }
     </style>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Hisham Dakkak",
+          "jobTitle": "AI & Automation Advisor",
+          "url": "https://hishamdakkak.com",
+          "image": "https://toolsworld.ai/wp-content/uploads/2025/06/H-Dakkak-1.jpeg",
+          "sameAs": [
+            "https://www.linkedin.com/in/hishamdakkak/",
+            "https://www.instagram.com/hisham_dakkak",
+            "https://www.tiktok.com/@hishamdakkak0"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "name": "ToolsWorld.ai",
+          "url": "https://toolsworld.ai",
+          "logo": "https://i.postimg.cc/ydcMDkvv/54.png"
+        }
+      ]
+    }</script>
 </head>
 <body class="bg-gray-900">
 
     <nav class="bg-gray-900/70 backdrop-blur-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Brand: show logo only, keep accessible name -->
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <!-- Brand: logo only -->
             <a href="#" class="flex items-center gap-3 focus-ring" aria-label="Hisham Dakkak">
-                <img src="https://i.postimg.cc/Bv3dyxss/Untitled-design-49.png" alt="Hisham Dakkak Logo" class="brand-logo" onerror="this.style.display='none'">
+                <img src="https://i.postimg.cc/Bv3dyxss/Untitled-design-49.png" alt="Hisham Dakkak Logo" class="brand-logo" decoding="async" fetchpriority="high" onerror="this.style.display='none'">
                 <span class="sr-only">Hisham Dakkak</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
@@ -268,7 +306,7 @@
                 <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/ydcMDkvv/54.png" alt="ToolsWorld.ai logo" class="company-logo" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold text-accent mb-2" data-lang-key="project_toolsworld_title">ToolsWorld.ai</h3>
-                    <p class="text-secondary" data-lang-key="project_toolsworld_desc">دليل أدوات ذكاء اصطناعي بعدة لغات يساعد الفرق على اكتشاف الأدوات وتقييمها.</p>
+                    <p class="text-secondary" data-lang-key="project_toolsworld_desc">أول منصة متعددة اللغات لاكتشاف وتقييم أدوات الذكاء الاصطناعي.</p>
                 </div>
                 <div class="bg-card p-6 rounded-lg border border-gray-700 card-hover">
                     <img src="https://i.postimg.cc/QMs52zvC/Untitled-design-44.png" alt="DigitalMSA.com logo" class="company-logo" onerror="this.style.display='none'">
@@ -364,7 +402,7 @@
                 window.addEventListener('resize', setNavH);
             }
 
-            // Updated translations (AR/EN) aligned with refined tone
+            // Updated translations (AR/EN)
             const translations = {
                 ar: {
                     nav_about: "عن هشام", nav_services: "الخدمات", nav_projects: "المشاريع", nav_contact: "تواصل معي",
@@ -396,7 +434,7 @@
                     expertise_title: "مجالات الخبرة والتدريب",
                     projects_title: "الشركات والأعمال",
                     project_grow50x_title: "grow50x.ai", project_grow50x_desc: "حلول نمو تعتمد على الذكاء الاصطناعي لتحويل الأعمال رقميًا وأتمتة المهام.",
-                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "دليل أدوات ذكاء اصطناعي بعدة لغات يساعد الفرق على اكتشاف الأدوات وتقييمها.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "أول منصة متعددة اللغات لاكتشاف وتقييم أدوات الذكاء الاصطناعي.",
                     project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "تسويق رقمي وتصميم مواقع لبناء حضور وعلامة تجارية قوية عبر الإنترنت.",
                     project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "حلول تصميم داخلي وتنفيذ ورق الجدران والستائر للمشاريع الهندسية.",
                     media_title: "من أعمالي",
@@ -443,7 +481,7 @@
                     expertise_title: "Expertise & Training Areas",
                     projects_title: "Companies & Work",
                     project_grow50x_title: "grow50x.ai", project_grow50x_desc: "AI‑driven growth solutions for digital transformation and task automation.",
-                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "A multi‑language AI tools directory to help teams discover and evaluate tools.",
+                    project_toolsworld_title: "ToolsWorld.ai", project_toolsworld_desc: "The first multi‑language platform to discover and evaluate AI tools.",
                     project_digitalmsa_title: "DigitalMSA.com", project_digitalmsa_desc: "Digital marketing and web design to build a strong online brand.",
                     project_dubaidecor_title: "DubaiDecorWorld.com", project_dubaidecor_desc: "Interior design solutions including wallpapers and curtains for engineering projects.",
                     media_title: "My Work",
